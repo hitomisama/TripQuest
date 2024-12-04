@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 const HtpData = [
   {
     pointNum: "Point 01",

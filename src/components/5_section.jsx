@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import Ttl from "./4_ttl";
 import HTP from "./6_HTP";
 import LGTT from "./7_LGTT";

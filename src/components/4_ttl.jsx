@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 // 数据数组
 const ttl_moji = [

@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 const LGTTData = [
   { ttl: "リセット・step1", sub: "悩みを手放す" },
   { ttl: "リセット・step2", sub: "未来への祈り" },
