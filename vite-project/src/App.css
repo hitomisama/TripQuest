@@ -1,0 +1,20 @@
+
+body{
+    font-family:'Zen Old Mincho';
+    color: white;
+    font-size: 18px;
+    background-color: #083300;
+}
+
+.ImageDivide{
+    display: flex;
+
+}
+
+.ImageDivide img{
+    width: 162px;
+    height: 127px;
+    flex-shrink: 0;
+    border: 1px solid #FFF;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
