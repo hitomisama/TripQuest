@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function TOP() {
+function Header() {
   return (
     <>
       <div className="TripQuest">
@@ -13,4 +13,4 @@ function TOP() {
   );
 }
 
-export default TOP;
+export default Header;

@@ -1,10 +1,57 @@
 [
-  { "id": "0", "text": "出発", "line": "" },
-  { "id": "1", "text": "リセットの旅へ", "line": "" },
-  { "id": "2", "text": "他のクエストは公式サイトでチェック", "line": "" },
-  { "id": "3", "text": "挑戦", "line": "" },
-  { "id": "4", "text": "クリア", "line": "" },
-  { "id": "5", "text": "Top", "line": "leaf.png" }
-
-
-]
+    {
+      "id": "0",
+      "text": "出発",
+      "line": "",
+      "type": "primary",
+      "action": "navigate",
+      "target": "/page1"
+    },
+    {
+      "id": "1",
+      "text": "リセットの旅へ",
+      "line": "",
+      "type": "secondary",
+      "action": "navigate",
+      "target": "/page2"
+    },
+    {
+      "id": "2",
+      "text": "他のクエストは公式サイトでチェック",
+      "line": "",
+      "type": "link",
+      "action": "externalLink",
+      "link": "https://example.com"
+    },
+    {
+      "id": "3",
+      "text": "挑戦",
+      "line": "",
+      "type": "danger",
+      "action": "navigate",
+      "target": "/challenge" 
+    },
+    {
+      "id": "4",
+      "text": "クリア",
+      "line": "",
+      "type": "success",
+      "action": "openWindow",
+      "windowUrl": "https://example.com"
+    },
+    {
+      "id": "5",
+      "text": "Top",
+      "line": "",
+      "type": "top",
+      "action": "scrollToTop" 
+    },
+    {
+      "id": "6",
+      "text": "TopPage",
+      "line": "leaf.png",
+      "type": "top",
+      "action": "navigate",
+      "target": "/"
+    }
+  ]
