@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "御霊神社",
+      "content": "神社＋電車はここだけ捕える！",
+      "img": "/path/to/image1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "無心庵",
+      "content": "お庭見ながら、あんみつを楽しみましょう",
+      "img": "/path/to/image2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "茶房 雲母",
+      "content": "お庭見ながら、あんみつを楽しみましょう",
+      "img": "/path/to/image3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "旬菜旬魚 さくら",
+      "content": "季節の食材を通して、自然とのつながりを感じましょう",
+      "img": "/path/to/image4.jpg"
+    }
+  ]
+  

@@ -5,8 +5,9 @@ import HTP from "../components/6_HTP.jsx";
 import LGTT from "../components/7_LGTT.jsx";
 import ButtonList from "../components/8_btn.jsx";
 import Top from "../components/Top.jsx";
-import QuestComponent from "../components/quest.jsx";
+import QuestComponent from "../components/quest(开发中）.jsx";
 import Step from "../components/step.jsx";
+import Accordion from "../components/Accordion(开发中）.jsx";
 
 function Page2() {
   const handleScrollToTop = () => {
@@ -33,6 +34,13 @@ function Page2() {
 
       <Ttl x={4} />
 
+      <div className="step_content">
+        <Step />
+      </div>
+
+<Ttl x={5} />
+
+<Accordion />
       <div className="backtop">
         <ButtonList
           x={5}
@@ -44,8 +52,6 @@ function Page2() {
           }
         />
       </div>
-
-      <Step x={0} />
     </>
   );
 }
