@@ -4,7 +4,7 @@ import Ttl from "../components/4_ttl.jsx";
 import HTP from "../components/6_HTP.jsx";
 import LGTT from "../components/7_LGTT.jsx";
 import ButtonList from "../components/8_btn.jsx";
-import "../app.css";
+import "../App.css";
 import Header2 from "../components/header2.jsx";
 import MV from "../components/2_mainvisual.jsx";
 import ImageDivide from "../components/3_ImageDivide.jsx";
