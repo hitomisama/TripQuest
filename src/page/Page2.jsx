@@ -6,6 +6,7 @@ import LGTT from "../components/7_LGTT.jsx";
 import ButtonList from "../components/8_btn.jsx";
 import Top from "../components/Top.jsx";
 import QuestComponent from "../components/quest.jsx";
+import Step from "../components/step.jsx";
 
 function Page2() {
   const handleScrollToTop = () => {
@@ -25,9 +26,9 @@ function Page2() {
       <h5 className="introduce">
         クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！
       </h5>
-<div className="quest">
-  <QuestComponent />
-</div>
+      <div className="quest">
+        <QuestComponent />
+      </div>
       <h3>クエスト一覧</h3>
 
       <Ttl x={4} />
@@ -43,6 +44,8 @@ function Page2() {
           }
         />
       </div>
+
+      <Step x={0} />
     </>
   );
 }
