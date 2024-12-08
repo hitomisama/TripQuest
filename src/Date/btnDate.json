@@ -29,7 +29,7 @@
       "line": "",
       "type": "danger",
       "action": "navigate",
-      "target": "/challenge" 
+      "subTargets": ["/Page3", "/Page4", "/Page5"]
     },
     {
       "id": "4",

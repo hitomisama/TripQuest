@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/Accordion.css"; // 可选：引入自定义样式文件
 import accordionData from '../Date/accordionData.json';
-import ButtonList from "./8_btn";
+import ButtonList from "./ButtonList";
 
 function Accordion() {
   const [openIndex, setOpenIndex] = useState(0); // 默认展开第一项

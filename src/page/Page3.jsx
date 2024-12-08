@@ -1,11 +1,15 @@
 import React from 'react';
-import ButtonList from "../components/8_btn.jsx";
+import ButtonList from "../components/ButtonList.jsx";
 
 
 function Page3() {
     return(
 <>
-<h1>2222</h1>
+<div className="top">
+        <Top x={1} />
+      </div>
+
+      <h1>page3</h1>
 
 
 </>
