@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/Accordion.css"; // 可选：引入自定义样式文件
 import accordionData from '../Date/accordionData.json';
+import ButtonList from "./8_btn";
 
 function Accordion() {
   const [openIndex, setOpenIndex] = useState(0); // 默认展开第一项
@@ -30,7 +31,7 @@ function Accordion() {
             <div className="accordion-content">
               <img src={item.img} alt={item.title} className="accordion-img" />
               <p>{item.content}</p>
-              <button className="accordion-button">出発 →</button>
+              <ButtonList x={0}></ButtonList>
             </div>
           )}
         </div>

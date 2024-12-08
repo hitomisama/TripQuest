@@ -38,9 +38,9 @@ function Page2() {
         <Step />
       </div>
 
-<Ttl x={5} />
+      <Ttl x={5} />
 
-<Accordion />
+      <Accordion />
       <div className="backtop">
         <ButtonList
           x={5}
@@ -51,6 +51,10 @@ function Page2() {
             })
           }
         />
+      </div>
+
+      <div className="more">
+        <ButtonList x={2} onClick={() => navigate("")} />
       </div>
     </>
   );
