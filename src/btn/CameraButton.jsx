@@ -1,37 +1,31 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
-function CameraButton() {
-  const videoRef = useRef(null);
-  const [cameraStream, setCameraStream] = useState(null);
+function CameraButton({ onCapture }) {
+  const fileInputRef = useRef(null);
 
-  const handleOpenCamera = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      videoRef.current.srcObject = stream; // 将流传递到 <video> 元素
-      setCameraStream(stream); // 保存流以便停止使用
-    } catch (error) {
-      console.error("Failed to access camera:", error);
-      alert("摄像头访问失败，请检查设备权限！");
-    }
-  };
-
-  const handleStopCamera = () => {
-    if (cameraStream) {
-      cameraStream.getTracks().forEach((track) => track.stop()); // 停止流
-      setCameraStream(null); // 清空状态
+  const handleCapture = (event) => {
+    const file = event.target.files[0];
+    if (file && onCapture) {
+      onCapture(file);
     }
   };
 
   return (
-    <div>
-      {!cameraStream ? (
-        <button onClick={handleOpenCamera}>打开相机</button>
-      ) : (
-        <>
-          <video ref={videoRef} autoPlay style={{ width: "100%" }}></video>
-          <button onClick={handleStopCamera}>关闭相机</button>
-        </>
-      )}
+    <div className="camera-container">
+      <button
+        className="camera-button"
+        onClick={() => fileInputRef.current.click()}
+      >
+        打开相机
+      </button>
+      <input
+        type="file"
+        accept="image/*"
+        capture="environment" // 环境相机（后置摄像头）
+        ref={fileInputRef}
+        onChange={handleCapture}
+        style={{ display: "none" }}
+      />
     </div>
   );
 }
