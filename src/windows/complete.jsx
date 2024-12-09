@@ -5,6 +5,7 @@ import CameraButton from "../btn/CameraButton";
 import PostButton from "../btn/PostButton";
 
 
+
 function PhotoUploadModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [uploadedFile, setUploadedFile] = useState(null);

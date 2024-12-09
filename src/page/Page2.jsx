@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Ttl from "../components/4_ttl.jsx";
 import ButtonList from "../components/ButtonList.jsx";
 import "../App.css";
@@ -9,8 +9,27 @@ import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
 import QuestComponent from "../components/quest.jsx";
 
-
 function Page2() {
+  const [tasks, setTasks] = useState([
+    { id: 1, name: "クエスト1", image: null },
+    { id: 2, name: "クエスト2", image: null },
+    { id: 3, name: "クエスト3", image: null },
+    { id: 4, name: "クエスト4", image: null },
+    { id: 5, name: "立ち寄りスポット（一つ）", image: null },
+  ]);
+
+  const handleCapture = (file, taskId) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      setTasks((prevTasks) =>
+        prevTasks.map((task) =>
+          task.id === taskId ? { ...task, image: reader.result } : task
+        )
+      );
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <div className="page2-container">
       {/* 顶部内容 */}
@@ -30,7 +49,7 @@ function Page2() {
 
       {/* クエスト组件 */}
       <div className="quest">
-        <QuestComponent />
+        <QuestComponent tasks={tasks} onCapture={handleCapture} />
       </div>
 
       {/* クエスト一覧 */}
@@ -46,7 +65,6 @@ function Page2() {
       <div className="accordion">
         <Accordion />
       </div>
-
 
       {/* 按钮区域 */}
       <div className="top">

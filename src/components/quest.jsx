@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/QuestComponent.css"
+import "../css/QuestComponent.css";
 
 const initialTasks = [
   { id: 1, name: "クエスト1", image: null },
@@ -9,21 +9,18 @@ const initialTasks = [
   { id: 5, name: "立ち寄りスポット（一つ）", image: null },
 ];
 
-function QuestComponent() {
+function QuestComponent({ onCapture }) {
   const [tasks, setTasks] = useState(initialTasks);
 
-  const handleUpload = (event, taskId) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const updatedTasks = tasks.map((task) =>
-          task.id === taskId ? { ...task, image: reader.result } : task
-        );
-        setTasks(updatedTasks);
-      };
-      reader.readAsDataURL(file);
-    }
+  const handleCapture = (file, taskId) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const updatedTasks = tasks.map((task) =>
+        task.id === taskId ? { ...task, image: reader.result } : task
+      );
+      setTasks(updatedTasks);
+    };
+    reader.readAsDataURL(file);
   };
 
   return (
@@ -40,15 +37,6 @@ function QuestComponent() {
             ) : (
               <div className="quest-placeholder">{task.name}</div>
             )}
-            <label className="upload-button">
-              アップロード
-              <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => handleUpload(e, task.id)}
-                style={{ display: "none" }}
-              />
-            </label>
           </div>
         ))}
       </div>
