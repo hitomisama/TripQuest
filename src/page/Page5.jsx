@@ -9,7 +9,7 @@ import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
 import QuestComponent from "../components/quest.jsx";
 import QuestCotent from "../components/questcontent.jsx";
-import StepBtn from "../components/btn/ClearBtn.jsx";
+import StepBtn from "../btn/ClearBtn.jsx";
 import SpotList from "../windows/SpotList.jsx";
 
 

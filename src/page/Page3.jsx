@@ -9,8 +9,9 @@ import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
 import QuestComponent from "../components/quest.jsx";
 import QuestCotent from "../components/questcontent.jsx";
-import StepBtn from "../components/btn/ClearBtn.jsx";
+import StepBtn from "../btn/ClearBtn.jsx";
 import SpotList from "../windows/SpotList.jsx";
+import PhotoUploadModal from "../windows/complete.jsx";
 
 
 
@@ -31,6 +32,7 @@ function Page3() {
 <StepBtn x={2}/>{/* 跳到step3 */}
 <StepBtn x={1}/>{/* 跳到step2 */}
 
+<PhotoUploadModal />
 
 <div className="top">
         <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />

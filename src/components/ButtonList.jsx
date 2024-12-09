@@ -1,8 +1,8 @@
 import React from "react";
-import ExternalLinkButton from "./btn/ExternalLinkButton";
-import NavigateButton from "./btn/NavigateButton";
-import OpenWindowButton from "./btn/OpenWindowButton";
-import ScrollToTopButton from "./btn/ScrollToTopButton";
+import ExternalLinkButton from "../btn/ExternalLinkButton";
+import NavigateButton from "../btn/NavigateButton";
+import OpenWindowButton from "../btn/OpenWindowButton";
+import ScrollToTopButton from "../btn/ScrollToTopButton";
 
 const ButtonList = ({ buttonData = [], filterId, filterAction }) => {
     if (!Array.isArray(buttonData)) {
