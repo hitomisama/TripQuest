@@ -9,6 +9,7 @@ import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
 import QuestComponent from "../components/quest.jsx";
 
+
 function Page2() {
   return (
     <div className="page2-container">
@@ -46,12 +47,11 @@ function Page2() {
         <Accordion />
       </div>
 
+
       {/* 按钮区域 */}
       <div className="top">
-          <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
+        <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
       </div>
-
-
     </div>
   );
 }

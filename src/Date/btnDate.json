@@ -23,14 +23,7 @@
       "action": "externalLink",
       "link": "https://example.com"
     },
-    {
-      "id": "3",
-      "text": "挑戦",
-      "line": "",
-      "type": "danger",
-      "action": "navigate",
-      "subTargets": ["/Page3", "/Page4", "/Page5"]
-    },
+
     {
       "id": "4",
       "text": "クリア",
