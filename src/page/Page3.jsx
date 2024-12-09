@@ -26,7 +26,7 @@ function Page3() {
 
 <QuestCotent x={1} />{/* クエスト　２*/}
 
-<SpotList x={0} />
+<SpotList x={0} isAccordion={true} />
 
 <StepBtn x={2}/>{/* 跳到step3 */}
 <StepBtn x={1}/>{/* 跳到step2 */}
