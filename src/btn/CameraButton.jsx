@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 
-function CameraButton({ onCapture, taskId }) {
+function CameraButton({ taskId, onCapture }) {
   const fileInputRef = useRef(null);
 
   const handleCapture = (event) => {
     const file = event.target.files[0];
     if (file && onCapture) {
-      onCapture(file, taskId); // 传递照片和任务 ID
+      onCapture(file, taskId);
     }
   };
 

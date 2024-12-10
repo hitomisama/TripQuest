@@ -7,7 +7,8 @@ import Header2 from "../components/header2.jsx";
 import Accordion from "../components/Accordion.jsx";
 import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
-import QuestComponent from "../components/quest.jsx";
+import QuestComponent from "../components/QuestComponent";
+import CameraButton from "../btn/CameraButton";
 
 function Page2() {
   const [tasks, setTasks] = useState([
@@ -47,12 +48,24 @@ function Page2() {
         クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！
       </h5>
 
-      {/* クエスト组件 */}
+      {/* 显示任务列表 */}
       <div className="quest">
-        <QuestComponent tasks={tasks} onCapture={handleCapture} />
+        <QuestComponent tasks={tasks} />
       </div>
 
-      {/* クエスト一覧 */}
+      {/* 添加相机上传功能 */}
+      <div className="camera-section">
+        {tasks.map((task) => (
+          <div key={task.id} className="camera-button-container">
+            <CameraButton
+              taskId={task.id}
+              onCapture={handleCapture} // 上传后更新任务状态
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* クエスト列表 */}
       <h3>クエスト一覧</h3>
       <Ttl x={4} />
 

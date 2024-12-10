@@ -7,7 +7,7 @@ import Header2 from "../components/header2.jsx";
 import Accordion from "../components/Accordion.jsx";
 import Step from "../components/step.jsx";
 import Top from "../components/Top.jsx";
-import QuestComponent from "../components/quest.jsx";
+import QuestComponent from "../components/QuestComponent.jsx";
 import QuestCotent from "../components/questcontent.jsx";
 import StepBtn from "../btn/ClearBtn.jsx";
 import SpotList from "../windows/SpotList.jsx";
