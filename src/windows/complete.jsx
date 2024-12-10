@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import CompleteModal from "./CompleteModal";
-import UploadButton from "../btn/UploadButton";
-import CameraButton from "../btn/CameraButton";
-import PostButton from "../btn/PostButton";
-
-
+import CompleteModal from "./CompleteModal.jsx";
+import UploadButton from "../btn/UploadButton.jsx";
+import CameraButton from "../btn/CameraButton.jsx";
+import PostButton from "../btn/PostButton.jsx";
 
 function PhotoUploadModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,23 +17,33 @@ function PhotoUploadModal() {
   };
 
   const handleUpload = (file) => {
-    setUploadedFile(file);
-    console.log("Uploaded file:", file);
+    const reader = new FileReader();
+    reader.onload = () => {
+      setUploadedFile(reader.result);
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleCameraOpen = () => {
     console.log("Camera button clicked");
-    // 唤起相机的逻辑（视浏览器支持情况）
   };
 
   const handlePostToX = () => {
-    console.log("Post to X:", uploadedFile);
-    // 提交到指定目标的逻辑
+    if (uploadedFile) {
+      console.log("Posting to X:", uploadedFile);
+      alert("投稿が完了しました！");
+    } else {
+      alert("写真を選択してください！");
+    }
   };
 
   const handlePostToInstagram = () => {
-    console.log("Post to Instagram:", uploadedFile);
-    // 提交到 Instagram 的逻辑
+    if (uploadedFile) {
+      console.log("Posting to Instagram:", uploadedFile);
+      alert("Instagram投稿が完了しました！");
+    } else {
+      alert("写真を選択してください！");
+    }
   };
 
   return (
@@ -43,10 +51,14 @@ function PhotoUploadModal() {
       <button onClick={handleOpenModal}>Open Upload Modal</button>
       <CompleteModal isOpen={isOpen} onClose={handleCloseModal}>
         <h2>写真を投稿</h2>
-        <UploadButton onUpload={handleUpload} />
-        <CameraButton onClick={handleCameraOpen} />
-        <PostButton text="Xに投稿" onClick={handlePostToX} />
-        <PostButton text="Instagramに投稿" onClick={handlePostToInstagram} />
+        <div className="upload-section">
+          <UploadButton onUpload={handleUpload} />
+          <CameraButton onCapture={handleUpload} />
+        </div>
+        <div className="post-section">
+          <PostButton text="Xに投稿" onClick={handlePostToX} />
+          <PostButton text="Instagramに投稿" onClick={handlePostToInstagram} />
+        </div>
       </CompleteModal>
     </div>
   );

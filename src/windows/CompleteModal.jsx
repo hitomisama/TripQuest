@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Modal.css"; // 确保样式文件正确
+import "../css/Modal.css";
 
 function CompleteModal({ isOpen, onClose, children }) {
   if (!isOpen) return null;
@@ -10,7 +10,7 @@ function CompleteModal({ isOpen, onClose, children }) {
         <button className="modal-close" onClick={onClose}>
           ×
         </button>
-        <div className="modal-body">{children}</div>
+        {children}
       </div>
     </div>
   );

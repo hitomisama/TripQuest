@@ -1,22 +1,19 @@
 import React, { useRef } from "react";
 
-function CameraButton({ taskId, onCapture }) {
+function CameraButton({ onCapture }) {
   const fileInputRef = useRef(null);
 
   const handleCapture = (event) => {
     const file = event.target.files[0];
     if (file && onCapture) {
-      onCapture(file, taskId);
+      onCapture(file);
     }
   };
 
   return (
     <div className="camera-container">
-      <button
-        className="camera-button"
-        onClick={() => fileInputRef.current.click()}
-      >
-        打开相机
+      <button className="camera-button" onClick={() => fileInputRef.current.click()}>
+        写真を撮る
       </button>
       <input
         type="file"

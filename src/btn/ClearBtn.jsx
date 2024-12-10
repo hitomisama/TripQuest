@@ -1,29 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 
-// 按钮数据数组
-const BtnDate = [
-  { ttl: "step 1", target: "/page3" },
-  { ttl: "step 2", target: "/page4" },
-  { ttl: "step 3", target: "/page5" },
-];
+function CameraButton({ taskId, onCapture }) {
+  const fileInputRef = useRef(null);
 
-function StepBtn({ x }) {
-  // 根据传入的索引获取按钮数据
-  const buttonData = BtnDate[x];
-
-  // 检查索引是否有效
-  if (!buttonData) {
-    return <p>Invalid button data for index: {x}</p>;
-  }
-
-  // 点击按钮跳转的处理函数
-  const handleButtonClick = () => {
-    window.location.href = buttonData.target; // 使用 `window.location.href` 跳转页面
+  const handleCapture = (event) => {
+    const file = event.target.files[0];
+    if (file && onCapture) {
+      onCapture(file, taskId);
+    }
   };
 
   return (
-    <button onClick={handleButtonClick}>{buttonData.ttl}</button>
+    <div className="camera-container">
+      <button className="camera-button" onClick={() => fileInputRef.current.click()}>
+        打开相机
+      </button>
+      <input
+        type="file"
+        accept="image/*"
+        capture="environment"
+        ref={fileInputRef}
+        onChange={handleCapture}
+        style={{ display: "none" }}
+      />
+    </div>
   );
 }
 
-export default StepBtn;
+export default CameraButton;
