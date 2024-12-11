@@ -37,6 +37,7 @@ function Page4() {
       <PhotoUploadModal taskId={3} onUpload={handleCapture} />
 
       {/* クエスト　１*/}
+      <SpotList x={2} isAccordion={false} />
 
       <div className="stepleft">
         <Link to="/Page3" style={{ textDecoration: "none", fontSize: "18px" }}>

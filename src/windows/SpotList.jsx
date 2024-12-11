@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Modal from "./Modal.jsx";
+import { useTaskContext } from "../components/TaskContext.jsx";
 import accordionData from "../Date/accordionData.json"; // 引入 JSON 数据
 import "../css/Accordion.css"; // 可选：自定义样式文件
+import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 
 function SpotList({ x, isAccordion = false }) {
   const [isModalOpen, setIsModalOpen] = useState(false); // 控制弹窗显示状态
@@ -27,6 +29,18 @@ function SpotList({ x, isAccordion = false }) {
     : accordionData[x]
     ? [accordionData[x]] // 渲染单条数据
     : [];
+
+  const { tasks, setTasks } = useTaskContext();
+
+  const handleCapture = (taskId, base64Image) => {
+    // console.log(`Uploading image for Task ${taskId}:`, base64Image); // 检查 Base64 数据是否正确
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, image: base64Image } : task
+      )
+    );
+    console.log("Updated tasks state:", tasks); // 确认任务列表是否正确更新
+  };
 
   return (
     <div className="spot-list">
@@ -70,6 +84,7 @@ function SpotList({ x, isAccordion = false }) {
                   <p>{item.content}</p>
                 </div>
               )}
+              <PhotoUploadModal taskId={5} onUpload={handleCapture} />
             </div>
           ))}
         </div>

@@ -44,15 +44,14 @@ const ttl_moji = [
     sub2: "Spot",
     className: "ttl",
   },
-  { id: 6, main: "長谷寺", btn: "出発", className: "ttl" },
+  { id: 6, main: "長谷寺", className: "ttl" },
   {
     id: 7,
     main: "錢洗弁財天",
     main2: "宇賀福神社",
-    btn: "出発",
     className: "ttl",
   },
-  { id: 8, main: "報國寺", btn: "出発", className: "ttl" },
+  { id: 8, main: "報國寺", className: "ttl" },
 ];
 
 function Ttl({ x }) {
@@ -75,7 +74,6 @@ function Ttl({ x }) {
       {main2 && <h2 className="main2">{main2}</h2>}
       {sub && <h3 className="sub">{sub}</h3>}
       {sub2 && <h3 className="sub2">{sub2}</h3>}
-      {btn && <button className="btn">{btn}</button>}
     </div>
   );
 }

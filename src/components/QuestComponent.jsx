@@ -12,14 +12,18 @@ function QuestComponent() {
       <div className="quest-title">スペシャル抹茶券</div>
 
       {/* 照片显示区域 */}
-      <div className="quest-list">
+      <div
+        className={`quest-list ${
+          allTasksCompleted ? "completed-overlay" : ""
+        }`} // 动态添加样式类
+      >
         {tasks.map((task) => (
           <div key={task.id} className="quest-item">
             <img
               src={task.image}
               alt={task.name}
               className="quest-image"
-              style={{ width: "50%", height: "auto" }}
+              style={{ width: "30%", height: "auto", display:'flex'}}
             />
           </div>
         ))}
