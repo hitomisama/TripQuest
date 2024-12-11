@@ -17,7 +17,7 @@ function CameraButton({ taskId, onCapture }) {
         className="camera-button"
         onClick={() => fileInputRef.current.click()}
       >
-        打开相机
+        写真を撮る
       </button>
       <input
         type="file"

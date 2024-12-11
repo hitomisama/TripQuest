@@ -34,7 +34,7 @@ function Page3() {
       <Ttl x={6} />
       <div className="quest-section">
         <QuestCotent x={0} />
-        <PhotoUploadModal taskId={1} defaultImage="/LOGO.png" onUpload={handleCapture} />
+        <PhotoUploadModal taskId={1}  onUpload={handleCapture} />
 
         <QuestCotent x={1} />
         <PhotoUploadModal taskId={2}  onUpload={handleCapture} />

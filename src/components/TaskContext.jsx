@@ -3,10 +3,8 @@ import React, { createContext, useContext, useState } from "react";
 const TaskContext = createContext();
 
 export const TaskProvider = ({ children }) => {
-  // 默认图片路径
   const defaultImage = "/LOGO.png";
 
-  // 定义任务列表，未上传时使用默认图片
   const [tasks, setTasks] = useState([
     { id: 1, name: "クエスト1", image: defaultImage },
     { id: 2, name: "クエスト2", image: defaultImage },
