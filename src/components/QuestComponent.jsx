@@ -1,18 +1,21 @@
 import React from "react";
-import "../css/QuestComponent.css";
+import { useTaskContext } from "../components/TaskContext.jsx";
 
-function QuestComponent({ tasks }) {
+function QuestComponent() {
+  const { tasks } = useTaskContext();
+
   return (
     <div className="quest-container">
       <div className="quest-title">スペシャル抹茶券</div>
       <div className="quest-list">
         {tasks.map((task) => (
           <div key={task.id} className="quest-item">
-            {task.image ? (
-              <img src={task.image} alt={task.name} className="quest-image" />
-            ) : (
-              <div className="quest-placeholder">{task.name}</div>
-            )}
+            <img
+              src={task.image}
+              alt={task.name}
+              className="quest-image"
+              style={{ width: "100%", height: "auto" }}
+            />
           </div>
         ))}
       </div>

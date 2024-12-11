@@ -15,12 +15,13 @@ function Page3() {
   const { tasks, setTasks } = useTaskContext();
 
   const handleCapture = (taskId, base64Image) => {
-    console.log(`任务 ${taskId} 上传了图片`);
+    console.log(`Uploading image for Task ${taskId}:`, base64Image); // 检查 Base64 数据是否正确
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === taskId ? { ...task, image: base64Image } : task
       )
     );
+    console.log("Updated tasks state:", tasks); // 确认任务列表是否正确更新
   };
 
   console.log("Rendering Page3 with tasks:", tasks);
@@ -33,10 +34,10 @@ function Page3() {
       <Ttl x={6} />
       <div className="quest-section">
         <QuestCotent x={0} />
-        <PhotoUploadModal taskId={1} onUpload={handleCapture} />
+        <PhotoUploadModal taskId={1} defaultImage="/LOGO.png" onUpload={handleCapture} />
 
         <QuestCotent x={1} />
-        <PhotoUploadModal taskId={2} onUpload={handleCapture} />
+        <PhotoUploadModal taskId={2}  onUpload={handleCapture} />
 
       </div>
 

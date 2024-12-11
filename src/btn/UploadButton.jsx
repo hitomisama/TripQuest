@@ -1,10 +1,12 @@
 import React from "react";
 
-function UploadButton({ onUpload }) {
+function UploadButton({ taskId,onUpload }) {
+
   const handleFileChange = (event) => {
     const file = event.target.files[0];
+    console.log("按钮上传", file);
     if (file && onUpload) {
-      onUpload(file);
+      onUpload(file,taskId); // 传递文件到父组件
     }
   };
 
