@@ -10,6 +10,7 @@ import ButtonList from "../components/ButtonList.jsx";
 
 function Page2() {
   const { tasks } = useTaskContext();
+  console.log("Tasks in Page2:", tasks);
 
   return (
     <div className="page2-container">
@@ -19,7 +20,9 @@ function Page2() {
       <QuestComponent tasks={tasks} />
       <Step />
       <Accordion />
-      <ButtonList buttonData={[{ id: "5", text: "返回顶部", action: "scrollToTop" }]} />
+      <ButtonList
+        buttonData={[{ id: "5", text: "返回顶部", action: "scrollToTop" }]}
+      />
     </div>
   );
 }
