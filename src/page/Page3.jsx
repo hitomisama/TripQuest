@@ -14,17 +14,13 @@ import CameraButton from "../btn/CameraButton";
 function Page3() {
   const { tasks, setTasks } = useTaskContext();
 
-  const handleCapture = (file, taskId) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      console.log("Updating tasks for taskId:", taskId);
-      setTasks((prevTasks) =>
-        prevTasks.map((task) =>
-          task.id === taskId ? { ...task, image: reader.result } : task
-        )
-      );
-    };
-    reader.readAsDataURL(file);
+  const handleCapture = (taskId, base64Image) => {
+    console.log(`任务 ${taskId} 上传了图片`);
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, image: base64Image } : task
+      )
+    );
   };
 
   console.log("Rendering Page3 with tasks:", tasks);
@@ -37,21 +33,17 @@ function Page3() {
       <Ttl x={6} />
       <div className="quest-section">
         <QuestCotent x={0} />
+        <PhotoUploadModal taskId={1} onUpload={handleCapture} />
+
         <QuestCotent x={1} />
+        <PhotoUploadModal taskId={2} onUpload={handleCapture} />
+
       </div>
-      <div>
-        {tasks.map((task) => (
-          <CameraButton
-            key={task.id}
-            taskId={task.id}
-            onCapture={handleCapture}
-          />
-        ))}
-      </div>
+
       <SpotList x={0} isAccordion={true} />
-      {/* <StepBtn x={2} />
-      <StepBtn x={1} /> */}
-      <PhotoUploadModal />
+
+
+
       <div className="page-footer">
         <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
         <ButtonList buttonData={buttonData.filter((btn) => btn.id === "6")} />

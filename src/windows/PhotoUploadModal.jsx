@@ -6,7 +6,6 @@ import PostButton from "../btn/PostButton.jsx";
 
 function PhotoUploadModal({ taskId, onUpload }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [uploadedFile, setUploadedFile] = useState(null);
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -19,9 +18,8 @@ function PhotoUploadModal({ taskId, onUpload }) {
   const handleUpload = (file) => {
     const reader = new FileReader();
     reader.onload = () => {
-      setUploadedFile(reader.result); // 设置当前任务点的图片
       if (onUpload) {
-        onUpload(taskId, reader.result); // 将任务点ID和图片传递给父组件
+        onUpload(taskId, reader.result); // 上传后更新对应任务点
       }
     };
     if (file instanceof Blob) {
@@ -31,36 +29,21 @@ function PhotoUploadModal({ taskId, onUpload }) {
     }
   };
 
-  const handlePostToX = () => {
-    if (uploadedFile) {
-      console.log(`Posting photo for Task ${taskId} to X:`, uploadedFile);
-      alert(`Task ${taskId} 投稿が完了しました！`);
-    } else {
-      alert("写真を選択してください！");
-    }
-  };
-
-  const handlePostToInstagram = () => {
-    if (uploadedFile) {
-      console.log(`Posting photo for Task ${taskId} to Instagram:`, uploadedFile);
-      alert(`Task ${taskId} Instagram投稿が完了しました！`);
-    } else {
-      alert("写真を選択してください！");
-    }
-  };
-
   return (
     <div className="photo-upload">
-      <button onClick={handleOpenModal}>クリア (Task {taskId})</button>
+      <button onClick={handleOpenModal}>上传照片 (任务 {taskId})</button>
       <CompleteModal isOpen={isOpen} onClose={handleCloseModal}>
-        <h2>Task {taskId} - 写真を投稿</h2>
+        <h2>任务 {taskId} - 上传照片</h2>
         <div className="upload-section">
           <UploadButton onUpload={handleUpload} />
           <CameraButton taskId={taskId} onCapture={handleUpload} />
         </div>
         <div className="post-section">
-          <PostButton text="Xに投稿" onClick={handlePostToX} />
-          <PostButton text="Instagramに投稿" onClick={handlePostToInstagram} />
+          <PostButton text="发布到X" onClick={() => console.log(`发布到X: 任务 ${taskId}`)} />
+          <PostButton
+            text="发布到Instagram"
+            onClick={() => console.log(`发布到Instagram: 任务 ${taskId}`)}
+          />
         </div>
       </CompleteModal>
     </div>

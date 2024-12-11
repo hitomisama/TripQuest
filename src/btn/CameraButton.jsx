@@ -5,7 +5,7 @@ function CameraButton({ taskId, onCapture }) {
 
   const handleCapture = (event) => {
     const file = event.target.files[0];
-    console.log("Captured file for taskId:", taskId, file);
+    console.log("Captured file for taskId:", taskId, file); // Debug log
     if (file && onCapture) {
       onCapture(file, taskId);
     }
