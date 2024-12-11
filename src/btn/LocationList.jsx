@@ -11,7 +11,7 @@ function NavigateButton({ location }) {
   return (
     <div className="NavigationItem">
       <h4 className="navigate-button" onClick={handleNavigate}>
-        出発
+        出発{location.name}
       </h4>
     </div>
   );

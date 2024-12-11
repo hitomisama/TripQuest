@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../css/Accordion.css"; // 可选：引入自定义样式文件
 import accordionData from '../Date/accordionData.json';
-import ButtonList from "./ButtonList";
+import locations from "../Date/locationsData.json";
+import LocationList from "../btn/LocationList.jsx";
 
 function Accordion() {
   const [openIndex, setOpenIndex] = useState(0); // 默认展开第一项
@@ -31,7 +32,14 @@ function Accordion() {
             <div className="accordion-content">
               <img src={item.img} alt={item.title} className="accordion-img" />
               <p>{item.content}</p>
-              <ButtonList x={0}></ButtonList>
+
+              {/* 动态渲染导航按钮，根据地点 ID  */}
+              {index >= 3 && index <= 7 && (
+                <>
+                  {console.log(`Rendering LocationList for renderId: ${index + 2}`)}
+                  <LocationList renderId={index + 2} />
+                </>
+              )}
             </div>
           )}
         </div>

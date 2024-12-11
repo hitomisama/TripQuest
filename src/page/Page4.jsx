@@ -9,6 +9,7 @@ import Top from "../components/Top.jsx";
 import QuestCotent from "../components/questcontent.jsx";
 import SpotList from "../windows/SpotList.jsx";
 import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
+import LocationList from "../btn/LocationList.jsx";
 
 function Page4() {
 
@@ -32,6 +33,7 @@ function Page4() {
         <Top x={2} />
       </div>
       <Ttl x={7}></Ttl>
+      <LocationList renderId={2} />
 
       <QuestCotent x={2} />
       <PhotoUploadModal taskId={3} onUpload={handleCapture} />

@@ -1,5 +1,5 @@
-import React from "react";
 import { useTaskContext } from "../components/TaskContext.jsx";
+import React, { useEffect } from "react";
 import QuestComponent from "../components/QuestComponent.jsx";
 import Top from "../components/Top.jsx";
 import Header2 from "../components/header2.jsx";
@@ -11,6 +11,10 @@ import ButtonList from "../components/ButtonList.jsx";
 function Page2() {
   const { tasks } = useTaskContext();
   console.log("Tasks in Page2:", tasks);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // 页面加载时滚动到顶部
+  }, []);
 
   return (
     <div className="page2-container">
