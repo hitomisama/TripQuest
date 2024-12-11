@@ -8,7 +8,7 @@ import Top from "../components/Top.jsx";
 import QuestCotent from "../components/questcontent.jsx";
 import StepBtn from "../btn/ClearBtn.jsx";
 import SpotList from "../windows/SpotList.jsx";
-import PhotoUploadModal from "../windows/complete.jsx";
+import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 import CameraButton from "../btn/CameraButton";
 
 function Page3() {
@@ -49,8 +49,8 @@ function Page3() {
         ))}
       </div>
       <SpotList x={0} isAccordion={true} />
-      <StepBtn x={2} />
-      <StepBtn x={1} />
+      {/* <StepBtn x={2} />
+      <StepBtn x={1} /> */}
       <PhotoUploadModal />
       <div className="page-footer">
         <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
