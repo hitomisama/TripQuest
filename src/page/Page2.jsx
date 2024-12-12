@@ -7,6 +7,7 @@ import Ttl from "../components/4_ttl.jsx";
 import Accordion from "../components/Accordion.jsx";
 import Step from "../components/step.jsx";
 import ButtonList from "../components/ButtonList.jsx";
+import Header from "../components/1_header.jsx";
 
 function Page2() {
   const { tasks } = useTaskContext();
@@ -18,6 +19,7 @@ function Page2() {
 
   return (
     <div className="page2-container">
+      <Header />
       <Top x={0} />
       <Header2 />
       <Ttl x={3} />

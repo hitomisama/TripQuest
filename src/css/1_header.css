@@ -1,9 +1,13 @@
    
-    /* .Header{
+    .Header{
         display: flex;
-    } */
+        justify-content: space-between;    
+        margin-top: 29px;    
+        margin-left: 14px;
+        margin-right: 14px;
+    }
 
-    .TripQuest{
+    /* .TripQuest{
         margin-top: 42px;
         margin-left: 14px;
     }
@@ -15,6 +19,7 @@
     }
 
     .Logo{
+        margin-top: 29px;
         margin-right: 21px;
-    }
+    } */
 

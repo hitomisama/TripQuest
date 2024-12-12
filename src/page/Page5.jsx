@@ -11,9 +11,9 @@ import SpotList from "../windows/SpotList.jsx";
 import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 import LocationList from "../btn/LocationList.jsx";
 import Header2 from "../components/header2.jsx";
+import Header from "../components/1_header.jsx";
 
 function Page5() {
-
   const { tasks, setTasks } = useTaskContext();
 
   const handleCapture = (taskId, base64Image) => {
@@ -29,6 +29,8 @@ function Page5() {
   console.log("Rendering Page3 with tasks:", tasks);
   return (
     <>
+      <Header />
+
       <div className="top">
         <Top x={3} />
       </div>

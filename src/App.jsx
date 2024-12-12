@@ -13,7 +13,7 @@ function App() {
   return (
     <TaskProvider>
       <Router>
-        <Header />
+
         <Routes>
           <Route path="/" element={<Page1 />} />
           <Route path="/page2" element={<Page2 />} />
