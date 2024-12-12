@@ -1,15 +1,19 @@
 import React from "react";
+import '../css/MV.css'
 
 function MV() {
   return (
     <>
       <div className="mv_moji">
-        <h1 className="kamakura">鎌倉</h1>
+        <div className="kamakura">
+        <h1 className="kama">鎌</h1>
+        <h1 className="kura">倉</h1>
+        </div>
         <div className="concept">
-          <p>
-            心を<strong id="reset">リセット</strong>する旅
-          </p>
-          <p>いってみませんか？</p>
+          <h3>
+            心を<strong id="reset"><h1>リセット</h1></strong>する旅
+          </h3>
+          <h3>いってみませんか？</h3>
         </div>
       </div>
 

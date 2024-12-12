@@ -1,0 +1,19 @@
+/* @media (max-width: 393px) { */
+   
+    .Header{
+        display: flex;
+    }
+
+    .TripQuest{
+        margin-top: 42px;
+        margin-left: 14px;
+    }
+   
+    .TripQuest img {
+        width: 100px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    .
+/* } */

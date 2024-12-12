@@ -1,0 +1,59 @@
+/* @media (max-width: 393px) { */
+    
+    h1 {
+        font-family: "Zen Old Mincho";
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 4.94px;    
+    }
+    
+    h2 {
+        font-size: 32pt;
+        font-family: 'Zen Old Mincho';
+    
+    }
+    
+    h3 {
+        font-family: "Zen Old Mincho";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.44px;
+    }
+    
+
+    .kamakura{
+        display: flex;
+    }
+    .kama {
+        width: 274px;
+        height: 101px;
+        flex-shrink: 0;
+        color: rgba(217, 217, 217, 0.27);
+        font-family: "Noto Sans JP";
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--Display-Large-Line-Height, 64px); /* 50% */
+        letter-spacing: 24.32px;
+    
+    
+    }
+    
+    .kura {
+        width: 134px;
+        height: 101px;
+        flex-shrink: 0;
+        color: rgba(217, 217, 217, 0.27);
+        font-family: "Noto Sans JP";
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--Display-Large-Line-Height, 64px); /* 50% */
+        letter-spacing: 24.32px;
+    
+    }
+/* } */

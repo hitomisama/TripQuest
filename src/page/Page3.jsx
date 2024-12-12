@@ -10,6 +10,8 @@ import QuestCotent from "../components/questcontent.jsx";
 import SpotList from "../windows/SpotList.jsx";
 import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 import LocationList from "../btn/LocationList.jsx";
+import Header2 from "../components/header2.jsx";
+
 
 function Page3() {
   const { tasks, setTasks } = useTaskContext();
@@ -31,6 +33,7 @@ function Page3() {
       <div className="top">
         <Top x={1} />
       </div>
+      <Header2 />
       <Ttl x={6} />
       <LocationList renderId={1} />
       <div className="quest-section">

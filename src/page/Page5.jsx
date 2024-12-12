@@ -10,6 +10,7 @@ import QuestCotent from "../components/questcontent.jsx";
 import SpotList from "../windows/SpotList.jsx";
 import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 import LocationList from "../btn/LocationList.jsx";
+import Header2 from "../components/header2.jsx";
 
 function Page5() {
 
@@ -31,6 +32,8 @@ function Page5() {
       <div className="top">
         <Top x={3} />
       </div>
+      <Header2 />
+
       <Ttl x={8}></Ttl>
       <LocationList renderId={2} />
 
