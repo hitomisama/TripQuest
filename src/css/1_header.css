@@ -1,7 +1,7 @@
    
-    .Header{
+    /* .Header{
         display: flex;
-    }
+    } */
 
     .TripQuest{
         margin-top: 42px;
@@ -12,5 +12,9 @@
         width: 100px;
         height: 24px;
         flex-shrink: 0;
+    }
+
+    .Logo{
+        margin-right: 21px;
     }
 

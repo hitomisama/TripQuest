@@ -9,7 +9,6 @@ body{
 
 .ImageDivide{
     display: flex;
-
 }
 
 .ImageDivide img{
@@ -17,7 +16,6 @@ body{
     height: 127px;
     flex-shrink: 0;
     border: 1px solid #FFF;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }
 
 h1 {
@@ -43,3 +41,11 @@ h3 {
     line-height: normal;
     letter-spacing: 1.44px;
 }
+
+.page1-container{
+    background-image: url(/mv_img.png);
+
+}
+    .Logo{
+        margin-right: 21px;
+    }
