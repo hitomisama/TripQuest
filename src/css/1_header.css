@@ -2,9 +2,6 @@
     .Header{
         display: flex;
         justify-content: space-between;    
-        margin-top: 29px;    
-        margin-left: 14px;
-        margin-right: 14px;
         align-items: center;
     }
 

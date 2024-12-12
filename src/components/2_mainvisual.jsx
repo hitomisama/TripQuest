@@ -11,7 +11,7 @@ function MV() {
         </div>
         <div className="concept">
           <h3>
-            心を<strong id="reset"><h1>リセット</h1></strong>する旅
+            心を<strong id="reset">リセット</strong>する旅
           </h3>
           <h3>いってみませんか？</h3>
         </div>

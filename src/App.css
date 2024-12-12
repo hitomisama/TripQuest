@@ -46,3 +46,8 @@ h3 {
     background-image: url(/mv_img.png);
 
 }
+
+.page1-container{
+    /* height: calc(100vh - 69px);
+overflow-y: auto; */
+}

@@ -30,8 +30,26 @@
 
     .kamakura{
         display: flex;
+        flex-shrink: 0;
+        justify-content: flex-end;
+
+
     }
-    .kama {
+    .kamakura h1{
+        color: rgba(217, 217, 217, 0.27);
+        font-family: "Noto Sans JP";
+        font-size: 128px;
+    }
+
+    .concept {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* 子元素右对齐 */
+        margin-right: 10px;
+    }
+
+
+    /* .kama {
         width: 274px;
         height: 101px;
         flex-shrink: 0;
@@ -43,8 +61,8 @@
         letter-spacing: 24.32px;
     
     
-    }
-    
+    } */
+/*     
     .kura {
         width: 134px;
         height: 101px;
@@ -55,7 +73,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: var(--Display-Large-Line-Height, 64px); /* 50% */
-        letter-spacing: 24.32px;
+        /* letter-spacing: 24.32px; */
     
-    }
+
 /* } */
