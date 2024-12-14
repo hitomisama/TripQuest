@@ -1,4 +1,6 @@
 import React from "react";
+import "../css/Htp.css";
+
 const HtpData = [
   {
     pointNum: "Point 01",
@@ -39,10 +41,14 @@ function HTP() {
       <section className="HTPContent">
         {HtpData.map((item, index) => (
           <div key={index} className="HTPTtem">
-            <p>{item.pointNum}</p>
+            <div className="point">
+              <p className="e1">{item.pointNum}</p>
+            </div>
             <img src={item.src} alt="contentimg" />
+            <div className="HTPcontent">
             <h4>{item.ttl}</h4>
             <h5>{item.content}</h5>
+            </div>
           </div>
         ))}
       </section>

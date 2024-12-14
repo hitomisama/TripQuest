@@ -22,7 +22,7 @@ function Page1() {
         <MV />
       </div>
       <ImageDivide />
-        <Header2 />
+      <Header2 />
       <ScrollTracker />
       {/* 介绍模块 */}
       <div className="WTQ">
@@ -46,12 +46,16 @@ function Page1() {
       {/* 三步说明模块 */}
       <div className="LGTT">
         <Ttl x={2} />
-        <h3 className="LGTT_ttl">
+        {/* <h3 className="LGTT_ttl">
           <p>心をリセットの</p>
           <p>３ステップ</p>
-        </h3>
-        <img src="/LGTTimg.png" alt="心をリセットの3ステップ" />
-        <LGTT />
+        </h3> */}
+        <div className="LGTTcontent">
+          {/* <img src="/LGTTimg.png" alt="心をリセットの3ステップ" />
+          <img src="/LGTTimg2.png" alt="" /> */}
+          {/* <LGTT /> */}
+          <img src="/LGTTimg3.png" alt="" />
+        </div>
       </div>
 
       {/* 按钮区域 */}

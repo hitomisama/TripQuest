@@ -1,0 +1,56 @@
+.HTPTtem {
+    margin: 53px 35px;
+    position: relative; /* 确保 .point 是基于当前 .HTPTtem 定位 */
+}
+
+.point {
+    background-color: #154603;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #FFFFFF80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-14.917deg);
+    position: absolute; /* 绝对定位，基于 .HTPTtem 定位 */
+    z-index: 2; /* 确保在标题和图片上方 */
+    top: -10px; /* 定位到标题的顶部 */
+    left: -6px; /* 定位到标题的左侧 */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.point p {
+    flex-shrink: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.HTPTtem img {
+    border-top: 50px solid #fff;
+    border-right: 20px solid #fff;
+    border-left: 20px solid #fff;
+    border-bottom: 2px solid #ffff;
+    position: relative; /* 确保图片不会影响 .point 的定位 */
+}
+
+.HTPcontent h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    color: black;
+    width: 291px;
+    padding: 10px 20px;
+    position: relative; /* 确保 h4 作为 .point 的定位基准 */
+}
+
+.HTPcontent h5 {
+    margin-top: 0;
+    background-color: #fff;
+    color: black;
+    width: 291px;
+    height: auto;
+    padding: 10px 20px 20px;
+}

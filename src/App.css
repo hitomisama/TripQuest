@@ -10,7 +10,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     /* 禁止水平滚动 */
-    font-family: 'Zen Old Mincho','';
+    font-family: 'Zen Old Mincho', '';
 }
 
 img {
@@ -21,8 +21,12 @@ img {
     /* 避免 inline-block 元素默认的间隙 */
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
-    font-size: 38px;
+    font-size: 34px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -30,8 +34,8 @@ h1 {
 }
 
 h2 {
-    font-size: 32pt;
-    font-weight:400;
+    font-size: 28pt;
+    font-weight: 400;
 }
 
 h3 {
@@ -50,12 +54,33 @@ h4 {
     letter-spacing: 10px;
 }
 
-.English{
+h5 {
+    font-family: "Zen Old Mincho";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+    letter-spacing: 3.92px;
+}
+
+.e1 {
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145.176%;
+    /* 26.132px */
+    letter-spacing: 3.78px;
+}
+
+.English {
     font-family: Manrope;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 145.176%; /* 17.421px */
+    line-height: 145.176%;
+    /* 17.421px */
     letter-spacing: 2.28px;
 }
 
@@ -64,7 +89,21 @@ h4 {
     background-repeat: no-repeat;
 }
 
-.page1-container {
-    /* height: calc(100vh - 69px);
-overflow-y: auto; */
+.WTQ h5 {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    place-items: center;
+    /* 水平和垂直居中 */
+    width: 275px;
+    margin: 53px 57px 53px 57px;
+}
+
+.LGTTcontent{
+    display: flex;
+}
+
+.LGTTcontent img{
+    margin-top: 53px;
+width: 400px;
 }

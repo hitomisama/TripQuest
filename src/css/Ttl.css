@@ -1,0 +1,32 @@
+.ttl-container{
+    display: block;
+    margin: auto 23px;
+}
+
+.mainTtl {
+    border-bottom: 1px solid #fff;
+    
+}
+
+.mainTtl h2{
+    margin: 0;
+    padding-bottom: 11px;
+}
+
+.subTtl {
+    display: flex;
+    flex-direction: column;
+    /* 子元素垂直排列 */
+    align-items: flex-end;
+    gap: 10px;
+    /* 子元素之间的间距 */
+}
+
+.sub,.sub2{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.sub2{
+    margin-top: 0;
+}

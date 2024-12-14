@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Ttl.css";
 
 const ttl_moji = [
   {
@@ -12,8 +13,8 @@ const ttl_moji = [
     id: 1,
     main: "クエストを楽しむ",
     main2: "ガイド",
-    sub: "How to",
-    sub2: "Play",
+    sub: "How",
+    sub2: "to Play",
     className: "ttl",
   },
   {
@@ -69,11 +70,15 @@ function Ttl({ x }) {
   }
 
   return (
-    <div className={`ttl-container ${mainClass}`}>
-      <h2>{main}</h2>
-      {main2 && <h2 className="main2">{main2}</h2>}
-      {sub && <h3 className="sub">{sub}</h3>}
-      {sub2 && <h3 className="sub2">{sub2}</h3>}
+    <div className={`ttl-container`}>
+      <div className="mainTtl">
+        <h2>{main}</h2>
+        {main2 && <h2 className="main2">{main2}</h2>}
+      </div>
+      <div className="subTtl">
+        {sub && <h3 className="sub">{sub}</h3>}
+        {sub2 && <h3 className="sub2">{sub2}</h3>}
+      </div>
     </div>
   );
 }
