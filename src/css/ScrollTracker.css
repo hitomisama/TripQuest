@@ -1,16 +1,16 @@
 .scroll-tracker {
-    position: fixed; /* 固定位置 */
-    right: 20px; /* 距离屏幕右边的距离 */
-    bottom: 20px; /* 距离屏幕底部的距离 */
+    position: fixed;
+    right: 10px; /* 靠右显示 */
+    bottom: 10px; /* 靠下显示 */
     width: 5px; /* 竖线宽度 */
-    height: 145px; /* 竖线高度 */
+    height: 100px; /* 固定竖线高度 */
     background-color: rgba(255, 255, 255, 0.5); /* 半透明竖线 */
   }
   
   .scroll-position {
     position: absolute;
     width: 5px; /* 方块宽度与竖线一致 */
+    height: 20px; /* 白色方块固定高度 */
     background-color: white; /* 不透明白色方块 */
-    height: 31px; /* 固定的方块高度 */
     transition: top 0.1s ease; /* 平滑过渡 */
   }
