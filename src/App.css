@@ -13,17 +13,13 @@ body {
     overflow-x: hidden; /* 禁止水平滚动 */
 }
 
-.ImageDivide {
-    display: flex;
-}
-
-.ImageDivide img {
-    width: 162px;
-    height: 127px;
-    flex-shrink: 0;
-    border: 1px solid #FFF;
-}
-
+img {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block; /* 避免 inline-block 元素默认的间隙 */
+  }
+  
 h1 {
     font-size: 38px;
     font-style: normal;

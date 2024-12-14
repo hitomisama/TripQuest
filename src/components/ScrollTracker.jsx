@@ -4,6 +4,7 @@ import "../css/ScrollTracker.css";
 function ScrollTracker() {
   const [scrollPercentage, setScrollPercentage] = useState(0); // 滚动百分比
   const [isVisible, setIsVisible] = useState(false); // 是否显示组件
+  const [isFirstScreen, setIsFirstScreen] = useState(true); // 是否在第一个屏幕界面
   let scrollTimeout;
 
   useEffect(() => {
@@ -14,11 +15,13 @@ function ScrollTracker() {
       const percentage = scrollHeight > 0 ? scrollTop / scrollHeight : 0; // 计算滚动百分比
 
       setScrollPercentage(percentage); // 更新滚动百分比
-      setIsVisible(true); // 显示组件
 
-      // 滚动停止后隐藏组件
+      // 判断是否还在第一个屏幕界面
+      setIsFirstScreen(scrollTop === 0);
+
+      setIsVisible(true); // 滚动时显示组件
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => setIsVisible(false), 1500);
+      scrollTimeout = setTimeout(() => setIsVisible(false), 1500); // 停止滚动后隐藏组件
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,8 +32,8 @@ function ScrollTracker() {
     };
   }, []);
 
-  const maxIndicatorHeight = 145; // 竖线高度
-  const blockHeight = 31; // 白色方块固定高度
+  const maxIndicatorHeight = 100; // 竖线高度
+  const blockHeight = 20; // 白色方块固定高度
   const maxTop = maxIndicatorHeight - blockHeight; // 限制白色方块不能超出竖线底部
   const topPosition = Math.min(scrollPercentage * maxIndicatorHeight, maxTop); // 计算白色方块的 `top` 值
 
@@ -38,7 +41,7 @@ function ScrollTracker() {
     <div
       className="scroll-tracker"
       style={{
-        opacity: isVisible ? 1 : 0, // 根据是否滑动显示组件
+        opacity: isVisible || isFirstScreen ? 1 : 0, // 如果在第一个屏幕或滚动中，则显示
         transition: "opacity 0.3s ease", // 平滑过渡显示/隐藏
       }}
     >
@@ -46,6 +49,7 @@ function ScrollTracker() {
         className="scroll-position"
         style={{
           top: `${topPosition}px`, // 白色方块的动态位置
+          height: `${blockHeight}px`, // 固定的方块高度
         }}
       ></div>
     </div>

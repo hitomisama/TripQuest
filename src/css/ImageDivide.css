@@ -1,31 +1,35 @@
-/* 容器样式 */
 .image-scroll-container {
     display: flex;
     align-items: center;
-    overflow: hidden; /* 隐藏溢出的图片 */
+    overflow: hidden; /* 隐藏溢出的部分 */
     width: 100%;
-  }
-  
-  /* 图片横向滚动区域 */
-  .ImageDivide {
-    display: flex;
-    overflow-x: auto; /* 启用横向滚动 */
-    scroll-behavior: smooth; /* 平滑滚动 */
-    white-space: nowrap;
-  }
-  
-  /* 图片样式 */
-  .ImageDivide img, .image-clone {
-    flex-shrink: 0;
-    width: 161px;
-    height: 127px;
-    border: 1px solid #FFF;
-    object-fit: cover;
-    margin-right: 10px; /* 替代负 gap */
-  }
-  
-  /* 隐藏滚动条 */
-  .ImageDivide::-webkit-scrollbar {
-    display: none;
-  }
+    height: 250px; /* 允许垂直方向的错开 */
+    position: relative; /* 允许绝对定位图片 */
+}
 
+.ImageDivide {
+    display: flex;
+    white-space: nowrap; /* 禁止换行 */
+    overflow-x: hidden; /* 禁止滚动条显示 */
+    height: 250px;
+}
+
+.ImageDivide img {
+    flex-shrink: 0;
+    width: 161px; /* 图片宽度 */
+    height: 127px; /* 图片高度 */
+    border: 1px solid #fff; /* 确保四边都有边框 */
+    object-fit: cover;
+    position: relative; /* 用于上下错开 */
+    margin-right: -10px;
+}
+
+/* 设置奇偶图片的垂直错开 */
+.ImageDivide img:nth-child(odd) {
+    transform: translateY(-30px); /* 奇数图片向上 */
+
+}
+
+.ImageDivide img:nth-child(even) {
+    transform: translateY(30px); /* 偶数图片向下 */
+}
