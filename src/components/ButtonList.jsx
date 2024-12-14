@@ -3,6 +3,7 @@ import ExternalLinkButton from "../btn/ExternalLinkButton";
 import NavigateButton from "../btn/NavigateButton";
 import OpenWindowButton from "../btn/OpenWindowButton";
 import ScrollToTopButton from "../btn/ScrollToTopButton";
+import "../css/BtnLis.css";
 
 const ButtonList = ({ buttonData = [], filterId, filterAction }) => {
     if (!Array.isArray(buttonData)) {
@@ -22,41 +23,54 @@ const ButtonList = ({ buttonData = [], filterId, filterAction }) => {
                 switch (button.action) {
                     case "navigate":
                         return (
-                            <NavigateButton
+                            <h4
                                 key={button.id}
-                                text={button.text}
-                                target={button.target}
-                                type={button.type}
-                            />
+                                className="navigate-button"
+                                onClick={() =>
+                                    NavigateButton({
+                                        text: button.text,
+                                        target: button.target,
+                                        type: button.type,
+                                    })
+                                }
+                            >
+                                {button.text}
+                            </h4>
                         );
                     case "externalLink":
                         return (
-                            <ExternalLinkButton
+                            <h4
                                 key={button.id}
-                                text={button.text}
-                                link={button.link}
-                                type={button.type}
-                            />
+                                className="external-link-button"
+                                onClick={() =>
+                                    ExternalLinkButton({
+                                        text: button.text,
+                                        link: button.link,
+                                        type: button.type,
+                                    })
+                                }
+                            >
+                                {button.text}
+                            </h4>
                         );
                     case "openWindow":
                         return (
-                            <OpenWindowButton
+                            <h4
                                 key={button.id}
-                                text={button.text}
-                                windowUrl={button.windowUrl}
-                                type={button.type}
-                            />
-                        );
-                    case "scrollToTop":
-                        return (
-                            <ScrollToTopButton
-                                key={button.id}
-                                text={button.text}
-                                type={button.type}
-                            />
+                                className="open-window-button"
+                                onClick={() =>
+                                    OpenWindowButton({
+                                        text: button.text,
+                                        windowUrl: button.windowUrl,
+                                        type: button.type,
+                                    })
+                                }
+                            >
+                                {button.text}
+                            </h4>
                         );
                     default:
-                        return <p key={button.id}>Unknown action: {button.action}</p>;
+                        return <h4 key={button.id}>Unknown action: {button.action}</h4>;
                 }
             })}
         </div>

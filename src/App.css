@@ -52,6 +52,7 @@ h4 {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 10px;
+    color: white;
 }
 
 h5 {
@@ -62,6 +63,14 @@ h5 {
     line-height: 150%;
     /* 21px */
     letter-spacing: 3.92px;
+}
+
+h6 {
+    font-family: "Zen Old Mincho";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .e1 {
@@ -99,11 +108,89 @@ h5 {
     margin: 53px 57px 53px 57px;
 }
 
-.LGTTcontent{
+.LGTTcontent {
     display: flex;
 }
 
-.LGTTcontent img{
+.LGTTcontent img {
     margin-top: 53px;
-width: 400px;
+    width: 400px;
+}
+
+
+.gotorest {
+    margin: 40px 60px;
+    gap: 10px;
+}
+
+.gotorest span {
+    border-right: 1px solid white;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    /* 按钮边框 */
+    padding: 10px 20px;
+    /* 调整按钮内边距 */
+    border-radius: 20px;
+    /* 圆角效果 */
+    text-decoration: none;
+    /* 移除超链接的下划线 */
+    color: white;
+    /* 按钮文字颜色 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.btn:hover {
+    background-color: white;
+    /* 悬停时背景变白 */
+    color: #083300;
+    /* 悬停时文字变成深绿色 */
+}
+
+.btn .arrow {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    /* 箭头的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头主线颜色 */
+    margin-left: 20px;
+}
+
+.btn .arrow::before,
+.btn .arrow::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    /* 箭头斜线的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头颜色 */
+    top: 0;
+    /* 对齐到主线 */
+    right: 0;
+    /* 靠右绘制箭头 */
+}
+
+.btn .arrow::before {
+    transform: rotate(45deg);
+    /* 顺时针旋转 */
+    transform-origin: top right;
+    /* 以右上角为旋转点 */
+}
+
+.btn .arrow::after {
+    transform: rotate(-45deg);
+    /* 逆时针旋转 */
+    transform-origin: bottom right;
+    /* 以右下角为旋转点 */
 }

@@ -1,0 +1,20 @@
+/* 基础样式 */
+.button-list h4 {
+    display: flex;
+    align-items: center;
+    position: relative; /* 为伪元素定位提供参照 */
+    margin: 10px 0; /* 控制 h4 的上下间距 */
+    cursor: pointer; /* 鼠标悬停时显示为点击状态 */
+}
+
+/* 添加右箭头 */
+.button-list h4::after {
+    content: ''; /* 必须设置内容，伪元素才能显示 */
+    position: absolute;
+    right: -20px; /* 调整箭头相对于 h4 的右边距 */
+    width: 1px; /* 箭头线的宽度 */
+    height: 15px; /* 箭头线的高度 */
+    background-color: #fff; /* 箭头线的颜色 */
+    transform: rotate(45deg); /* 上斜线 */
+    box-shadow: 1px -1px 0 0 #000, 1px 1px 0 0 #000; /* 模拟箭头尖 */
+}

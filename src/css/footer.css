@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    gap: 20px; /* 各元素间距 */
+    background-color: #154603; /* 背景色 */
+    padding: 20px; /* 内边距 */
+    color: white; /* 字体颜色 */
+    font-size: 14px; /* 字体大小 */
+    font-family: 'Zen Old Mincho', serif; /* 字体样式 */
+}
+
+/* 链接样式（如果需要点击） */
+.footer p {
+    margin: 0; /* 去除默认外边距 */
+    cursor: pointer; /* 鼠标悬停为手型 */
+    transition: color 0.3s ease; /* 添加颜色变化过渡效果 */
+}
+
+.footer p:hover {
+    color: rgba(255, 255, 255, 0.8); /* 悬停时颜色变浅 */
+}

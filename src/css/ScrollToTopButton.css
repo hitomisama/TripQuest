@@ -1,0 +1,35 @@
+.scroll-to-top-container {
+    position: fixed;
+    bottom: 20px; /* 距离底部 20px */
+    right: 20px; /* 距离右侧 20px */
+    width: 50px; /* 按钮宽度 */
+    height: 50px; /* 按钮高度 */
+    cursor: pointer;
+    z-index: 1000; /* 保证它在最上层 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* 默认不可见 */
+    pointer-events: none; /* 默认不可点击 */
+    transition: opacity 0.3s ease; /* 平滑过渡显示/隐藏 */
+  }
+  
+  .scroll-to-top-container.visible {
+    opacity: 1; /* 可见状态 */
+    pointer-events: auto; /* 可点击 */
+  }
+  
+  .scroll-to-top-container.hidden {
+    opacity: 0; /* 隐藏状态 */
+    pointer-events: none; /* 不可点击 */
+  }
+  
+  .scroll-to-top-container:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* 鼠标悬停时的背景色 */
+    border-radius: 50%; /* 按钮圆形效果 */
+  }
+  
+  .scroll-to-top-icon {
+    width: 60%; /* 图片宽度填满容器 */
+    height: auto; /* 自动调整高度 */
+  }

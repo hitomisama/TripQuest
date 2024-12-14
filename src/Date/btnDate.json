@@ -34,7 +34,7 @@
     },
     {
       "id": "5",
-      "text": "Top",
+      "img": "/top.png",
       "line": "",
       "type": "top",
       "action": "scrollToTop" 

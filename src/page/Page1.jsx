@@ -12,6 +12,9 @@ import ImageDivide from "../components/3_ImageDivide.jsx";
 import buttonData from "../Date/btnDate.json"; // 导入按钮数据
 import Header from "../components/1_header.jsx";
 import ScrollTracker from "../components/ScrollTracker.jsx";
+import ScrollToTopButton from "../btn/ScrollToTopButton.jsx";
+import { Link } from "react-router-dom"; // 引入 Link 组件用于跳转
+
 
 function Page1() {
   return (
@@ -60,12 +63,17 @@ function Page1() {
 
       {/* 按钮区域 */}
       <div className="button-section">
-        <div className="gotorest">
-          <ButtonList buttonData={buttonData} filterId="1" />
+      <div className="gotorest">
+          {/* 用 Link 包裹整个 .btn */}
+          <Link to="/page2" className="btn">
+            <span>リセットの旅へ</span>
+            <div className="arrow"></div>
+          </Link>
         </div>
-        <div className="top">
+        {/* <div className="top">
           <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
-        </div>
+        </div> */}
+        <ScrollToTopButton />
       </div>
     </div>
   );
