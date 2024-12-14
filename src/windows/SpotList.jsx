@@ -87,7 +87,7 @@ function SpotList({ x, isAccordion = false }) {
                 </div>
               )}
               {/* 渲染上传按钮 */}
-              <PhotoUploadModal taskId={item.id} onUpload={handleCapture} />
+              <PhotoUploadModal taskId={5} onUpload={handleCapture} />
               {/* 动态渲染 LocationList，基于 item.id + 4 */}
               <LocationList renderId={item.id + 3} />
             </div>

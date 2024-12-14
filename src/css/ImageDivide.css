@@ -1,0 +1,31 @@
+/* 容器样式 */
+.image-scroll-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* 隐藏溢出的图片 */
+    width: 100%;
+  }
+  
+  /* 图片横向滚动区域 */
+  .ImageDivide {
+    display: flex;
+    overflow-x: auto; /* 启用横向滚动 */
+    scroll-behavior: smooth; /* 平滑滚动 */
+    white-space: nowrap;
+  }
+  
+  /* 图片样式 */
+  .ImageDivide img, .image-clone {
+    flex-shrink: 0;
+    width: 161px;
+    height: 127px;
+    border: 1px solid #FFF;
+    object-fit: cover;
+    margin-right: 10px; /* 替代负 gap */
+  }
+  
+  /* 隐藏滚动条 */
+  .ImageDivide::-webkit-scrollbar {
+    display: none;
+  }
+

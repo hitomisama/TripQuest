@@ -1,0 +1,15 @@
+.scroll-tracker {
+    position: fixed;
+    right: 20px; /* 靠右显示 */
+    top: 0;
+    width: 5px; /* 竖线宽度 */
+    height:145px; /* 占满屏幕高度 */
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明竖线 */
+  }
+  
+  .scroll-position {
+    position: absolute;
+    width: 5px; /* 方块宽度与竖线一致 */
+    background-color: white; /* 不透明白色方块 */
+    transition: top 0.1s ease; /* 平滑过渡 */
+  }

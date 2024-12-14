@@ -11,6 +11,7 @@ import MV from "../components/2_mainvisual.jsx";
 import ImageDivide from "../components/3_ImageDivide.jsx";
 import buttonData from "../Date/btnDate.json"; // 导入按钮数据
 import Header from "../components/1_header.jsx";
+import ScrollTracker from "../components/ScrollTracker.jsx";
 
 function Page1() {
   return (
@@ -19,10 +20,10 @@ function Page1() {
       <div className="fb">
         <Header />
         <MV />
-        <ImageDivide />
-        <Header2 />
       </div>
-
+      <ImageDivide />
+        <Header2 />
+      <ScrollTracker />
       {/* 介绍模块 */}
       <div className="WTQ">
         <Ttl x={0} />

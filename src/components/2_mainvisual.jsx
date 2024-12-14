@@ -2,6 +2,11 @@ import React from "react";
 import '../css/MV.css'
 
 function MV() {
+  const updatePosition = (scrollPercentage) => {
+    const line = document.querySelector('.bdj::after');
+    const newHeight = 146 * scrollPercentage; // 根据滚动百分比计算高度
+    line.style.height = `${newHeight}px`;
+  };
   return (
     <>
       <div className="mv_moji">
@@ -15,7 +20,11 @@ function MV() {
           </h3>
           <h3>いってみませんか？</h3>
         </div>
+        <div className="bdj">
+  <div className="current-position"></div> {/* 用于表示当前位置的白线 */}
+</div>
       </div>
+
 
       {/* 第二部分内容 */}
       <div className="pg2">
