@@ -46,7 +46,6 @@ function ScrollTracker() {
         className="scroll-position"
         style={{
           top: `${topPosition}px`, // 白色方块的动态位置
-          height: `${blockHeight}px`, // 固定的方块高度
         }}
       ></div>
     </div>

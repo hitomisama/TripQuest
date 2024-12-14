@@ -58,8 +58,9 @@ margin-top: 161px;
 }
 .pg2 h1{
     letter-spacing: 20px;
-    padding-right: 40px;
-    margin-left: 0px;
+    /* padding-right: 40px;
+    margin-left: 0px; */
+    margin: 0;
 }
 
 .pg2 h2{
@@ -71,7 +72,8 @@ margin-top: 161px;
 .pg2 h4{
     margin-right: 54px;
     margin-left: 50px;
-    margin-bottom: 85px;
+    margin-bottom: 80px;
+    margin-top: 212px;
 }
 
 .pg2 h4 p{
