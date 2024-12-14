@@ -50,7 +50,7 @@ h3 {
 
 .fb{
     background-image: url(/mv_img.png);
-
+    background-repeat: no-repeat;
 }
 
 .page1-container{
