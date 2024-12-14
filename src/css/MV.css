@@ -51,5 +51,29 @@
     /* 垂直排版，文字从右到左 */
     text-orientation: upright;
     /* 文字保持直立显示 */
-    padding-bottom: 130px;
+}
+
+.ttl{
+margin-top: 161px;
+}
+.pg2 h1{
+    letter-spacing: 20px;
+    padding-right: 40px;
+    margin-left: 0px;
+}
+
+.pg2 h2{
+    letter-spacing: 20px;
+    margin: 0;
+
+}
+
+.pg2 h4{
+    margin-right: 54px;
+    margin-left: 50px;
+    margin-bottom: 85px;
+}
+
+.pg2 h4 p{
+    margin: 10px;
 }

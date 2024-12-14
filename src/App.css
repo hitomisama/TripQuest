@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
 
 body {
-  font-family: 'Zen Old Mincho', serif;
+    font-family: 'Zen Old Mincho', serif;
 }
 
-body{
-    font-family:'Zen Old Mincho';
+body {
     color: white;
     font-size: 18px;
     background-color: #083300;
-    /* max-width: 393px; */
+    max-width: 393px;
     margin: 0;
 }
 
-.ImageDivide{
+.ImageDivide {
     display: flex;
 }
 
-.ImageDivide img{
+.ImageDivide img {
     width: 162px;
     height: 127px;
     flex-shrink: 0;
@@ -25,22 +24,18 @@ body{
 }
 
 h1 {
-    font-family: "Zen Old Mincho";
     font-size: 38px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 4.94px;    
+    letter-spacing: 4.94px;
 }
 
 h2 {
     font-size: 32pt;
-    font-family: 'Zen Old Mincho'serif;
-
 }
 
 h3 {
-    font-family: "Zen Old Mincho";
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -48,12 +43,19 @@ h3 {
     letter-spacing: 1.44px;
 }
 
-.fb{
+h4{
+    font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 10px;
+}
+.fb {
     background-image: url(/mv_img.png);
     background-repeat: no-repeat;
 }
 
-.page1-container{
+.page1-container {
     /* height: calc(100vh - 69px);
 overflow-y: auto; */
 }

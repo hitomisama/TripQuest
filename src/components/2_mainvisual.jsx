@@ -1,9 +1,9 @@
 import React from "react";
-import '../css/MV.css'
+import "../css/MV.css";
 
 function MV() {
   const updatePosition = (scrollPercentage) => {
-    const line = document.querySelector('.bdj::after');
+    const line = document.querySelector(".bdj::after");
     const newHeight = 146 * scrollPercentage; // 根据滚动百分比计算高度
     line.style.height = `${newHeight}px`;
   };
@@ -11,8 +11,8 @@ function MV() {
     <>
       <div className="mv_moji">
         <div className="kamakura">
-        <h1 className="kama">鎌</h1>
-        <h1 className="kura">倉</h1>
+          <h1 className="kama">鎌</h1>
+          <h1 className="kura">倉</h1>
         </div>
         <div className="concept">
           <h3>
@@ -21,15 +21,17 @@ function MV() {
           <h3>いってみませんか？</h3>
         </div>
         <div className="bdj">
-  <div className="current-position"></div> {/* 用于表示当前位置的白线 */}
-</div>
+          <div className="current-position"></div>{" "}
+          {/* 用于表示当前位置的白线 */}
+        </div>
       </div>
-
 
       {/* 第二部分内容 */}
       <div className="pg2">
-        <h1>リセット</h1>
-        <h2>一人でも楽しめる一人旅</h2>
+        <div className="ttl">
+          <h1>リセット</h1>
+          <h2>一人でも楽しめる一人旅</h2>
+        </div>
         <div className="description">
           <h4>
             <p>都会の喧騒から離れ</p>
