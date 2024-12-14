@@ -5,8 +5,6 @@
     display: flex;
     flex-shrink: 0;
     justify-content: flex-end;
-
-
 }
 
 .kamakura h1 {
@@ -21,14 +19,19 @@
     flex-direction: column;
     align-items: flex-end;
     /* 子元素右对齐 */
-    margin-right: 10px;
+    margin-right: 28px;
     margin-bottom: 343px;
+}
+
+.concept h3 {
+    margin-bottom: 10px;
 }
 
 .kama,
 .kura {
     margin-top: 45px;
     margin-right: 20px;
+    margin-bottom: 40px;
 }
 
 .kama {
@@ -53,29 +56,32 @@
     /* 文字保持直立显示 */
 }
 
-.ttl{
-margin-top: 161px;
+.ttl {
+    margin-top: 16px;
 }
-.pg2 h1{
+
+.pg2 h1 {
     letter-spacing: 20px;
     /* padding-right: 40px;
     margin-left: 0px; */
     margin: 0;
 }
 
-.pg2 h2{
+.pg2 h2 {
     letter-spacing: 20px;
     margin: 0;
 
 }
 
-.pg2 h4{
+.pg2 h4 {
     margin-right: 54px;
     margin-left: 50px;
-    margin-bottom: 80px;
-    margin-top: 212px;
+    margin-bottom: 84px;
+    margin-top: 80px;
 }
 
-.pg2 h4 p{
-    margin: 10px;
+.pg2 h4 p {
+    width: 19px;
+    height: 770px;
+    flex-shrink: 0;
 }

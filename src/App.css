@@ -10,6 +10,7 @@ body {
     background-color: #083300;
     max-width: 393px;
     margin: 0;
+    overflow-x: hidden; /* 禁止水平滚动 */
 }
 
 .ImageDivide {
