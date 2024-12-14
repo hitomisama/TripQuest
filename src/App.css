@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
 
-body {
-    font-family: 'Zen Old Mincho', serif;
-}
+
 
 body {
     color: white;
@@ -10,16 +8,19 @@ body {
     background-color: #083300;
     max-width: 393px;
     margin: 0;
-    overflow-x: hidden; /* 禁止水平滚动 */
+    overflow-x: hidden;
+    /* 禁止水平滚动 */
+    font-family: 'Zen Old Mincho','';
 }
 
 img {
     border: 0;
     margin: 0;
     padding: 0;
-    display: block; /* 避免 inline-block 元素默认的间隙 */
-  }
-  
+    display: block;
+    /* 避免 inline-block 元素默认的间隙 */
+}
+
 h1 {
     font-size: 38px;
     font-style: normal;
@@ -30,6 +31,7 @@ h1 {
 
 h2 {
     font-size: 32pt;
+    font-weight:400;
 }
 
 h3 {
@@ -40,13 +42,23 @@ h3 {
     letter-spacing: 1.44px;
 }
 
-h4{
+h4 {
     font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 10px;
 }
+
+.English{
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145.176%; /* 17.421px */
+    letter-spacing: 2.28px;
+}
+
 .fb {
     background-image: url(/mv_img.png);
     background-repeat: no-repeat;

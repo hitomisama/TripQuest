@@ -26,7 +26,7 @@
 
 /* 设置奇偶图片的垂直错开 */
 .ImageDivide img:nth-child(odd) {
-    transform: translateY(-30px); /* 奇数图片向上 */
+    transform: translateY(0px); /* 奇数图片向上 */
 
 }
 
