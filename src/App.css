@@ -130,15 +130,10 @@ h6 {
     justify-content: center;
     align-items: center;
     border: 1px solid white;
-    /* 按钮边框 */
     padding: 10px 10px;
-    /* 调整按钮内边距 */
     border-radius: 20px;
-    /* 圆角效果 */
     text-decoration: none;
-    /* 移除超链接的下划线 */
     color: white;
-    /* 按钮文字颜色 */
     transition: background-color 0.3s ease, color 0.3s ease;
     /* 添加过渡效果 */
     margin-top: 43px;
@@ -151,13 +146,6 @@ h6 {
     letter-spacing: 1.62px;
     margin: 0;
     padding-right: 10px;
-}
-
-.btn:hover {
-    background-color: white;
-    /* 悬停时背景变白 */
-    color: #083300;
-    /* 悬停时文字变成深绿色 */
 }
 
 .btn .arrow {

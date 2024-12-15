@@ -1,0 +1,70 @@
+.btn_more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    /* 按钮边框 */
+    padding: 10px 10px;
+    /* 调整按钮内边距 */
+    border-radius: 20px;
+    /* 圆角效果 */
+    text-decoration: none;
+    /* 移除超链接的下划线 */
+    color: white;
+    /* 按钮文字颜色 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* 添加过渡效果 */
+    margin-top: 43px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.more h4{
+    border-right: 1px solid white;
+    letter-spacing: 1.62px;
+    margin: 0;
+    padding-right: 80px;
+}
+
+
+.btn_more .arrow {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    /* 箭头的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头主线颜色 */
+    margin-left: 20px;
+}
+
+.btn_more .arrow::before,
+.btn_more .arrow::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    /* 箭头斜线的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头颜色 */
+    top: 0;
+    /* 对齐到主线 */
+    right: 0;
+    /* 靠右绘制箭头 */
+}
+
+.btn_more .arrow::before {
+    transform: rotate(45deg);
+    /* 顺时针旋转 */
+    transform-origin: top right;
+    /* 以右上角为旋转点 */
+}
+
+.btn_more .arrow::after {
+    transform: rotate(-45deg);
+    /* 逆时针旋转 */
+    transform-origin: bottom right;
+    /* 以右下角为旋转点 */
+}
