@@ -88,8 +88,7 @@ h6 {
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 145.176%;
-    /* 17.421px */
+    line-height: 145.176%; /* 17.421px */
     letter-spacing: 2.28px;
 }
 
@@ -123,69 +122,62 @@ h6 {
     gap: 10px;
 } */
 
-
+.button-section {
+    display: flex;
+    flex-direction: column; /* 按钮纵向排列 */
+    align-items: flex-end; /* 按钮对齐到右侧 */
+    padding: 20px 10px; /* 调整内边距 */
+    gap: 15px; /* 按钮之间的间距 */
+}
 
 .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
-    padding: 10px 10px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    /* 添加过渡效果 */
-    margin-top: 43px;
-    margin-right: 5px;
-    margin-left: 169px;
+    border: 1px solid white; /* 按钮边框 */
+    padding: 10px 20px; /* 调整按钮内边距 */
+    border-radius: 20px; /* 圆角效果 */
+    text-decoration: none; /* 移除超链接的下划线 */
+    color: white; /* 按钮文字颜色 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 添加过渡效果 */
+    margin: 15px 10px; /* 调整按钮间距 */
 }
 
 .btn h4 {
-    border-right: 1px solid white;
-    letter-spacing: 1.62px;
+    border-right: 1px solid white; /* 添加右侧边框 */
+    letter-spacing: 1.62px; /* 设置文字间距 */
     margin: 0;
-    padding-right: 10px;
+    padding-right: 15px; /* 调整文字和边框间距 */
+    font-size: 18px; /* 调整文字大小 */
 }
 
 .btn .arrow {
     position: relative;
     display: inline-block;
-    width: 20px;
-    /* 箭头的长度 */
-    height: 1px;
-    /* 箭头线条的粗细 */
-    background-color: white;
-    /* 箭头主线颜色 */
-    margin-left: 20px;
+    width: 20px; /* 箭头的长度 */
+    height: 1px; /* 箭头线条的粗细 */
+    background-color: white; /* 箭头主线颜色 */
+    margin-left: 10px; /* 调整箭头与文字的距离 */
 }
 
 .btn .arrow::before,
 .btn .arrow::after {
     content: '';
     position: absolute;
-    width: 8px;
-    /* 箭头斜线的长度 */
-    height: 1px;
-    /* 箭头线条的粗细 */
-    background-color: white;
-    /* 箭头颜色 */
-    top: 0;
-    /* 对齐到主线 */
-    right: 0;
-    /* 靠右绘制箭头 */
+    width: 8px; /* 箭头斜线的长度 */
+    height: 1px; /* 箭头线条的粗细 */
+    background-color: white; /* 箭头颜色 */
+    top: 0; /* 对齐到主线 */
+    right: 0; /* 靠右绘制箭头 */
 }
 
 .btn .arrow::before {
-    transform: rotate(45deg);
-    /* 顺时针旋转 */
-    transform-origin: top right;
-    /* 以右上角为旋转点 */
+    transform: rotate(45deg); /* 顺时针旋转 */
+    transform-origin: top right; /* 以右上角为旋转点 */
 }
 
 .btn .arrow::after {
-    transform: rotate(-45deg);
-    /* 逆时针旋转 */
-    transform-origin: bottom right;
-    /* 以右下角为旋转点 */
+    transform: rotate(-45deg); /* 逆时针旋转 */
+    transform-origin: bottom right; /* 以右下角为旋转点 */
 }
+

@@ -6,8 +6,11 @@ function Top({x}) {
 const item = TopDate[x];
   return (
 <>
-    <h1>{item.ttl}</h1>
+<div className="page2-ttl">
+<h1>{item.ttl}</h1>
     <p className="English">{item.sub}</p>
+
+</div>
 </>
   );
 }

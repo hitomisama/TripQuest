@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/ExternalLink.css";
+// import "../css/ExternalLink.css";
 
 function ExternalLink() {
   const handleClick = () => {
@@ -8,9 +8,9 @@ function ExternalLink() {
   };
 
   return (
-    <div className="btn_more" onClick={handleClick}>
-      <div className="more">
-        <h4>他のクエストは公式サイトでチェック</h4>
+    <div className="=more" onClick={handleClick}>
+      <div className="btn">
+        <h4>他のクエストは公式<br />サイトでチェック</h4>
         <div className="arrow"></div>
       </div>
     </div>

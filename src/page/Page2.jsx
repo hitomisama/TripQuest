@@ -8,6 +8,9 @@ import Accordion from "../components/Accordion.jsx";
 import Step from "../components/step.jsx";
 import ButtonList from "../components/ButtonList.jsx";
 import Header from "../components/1_header.jsx";
+import ScrollToTopButton from "../btn/ScrollToTopButton.jsx";
+import ExternalLink from "../btn/ExternalLink.jsx";
+import "../css/Page2.css";
 
 function Page2() {
   const { tasks } = useTaskContext();
@@ -19,16 +22,20 @@ function Page2() {
 
   return (
     <div className="page2-container">
-      <Header />
-      <Top x={0} />
+      <div className="TTL_mv">
+        <Header />
+        <Top x={0} />
+      </div>
       <Header2 />
       <Ttl x={3} />
+      <h5 className="Introduction">クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！</h5>
       <QuestComponent tasks={tasks} />
       <Step />
       <Accordion />
-      <ButtonList
-        buttonData={[{ id: "5", text: "返回顶部", action: "scrollToTop" }]}
-      />
+      <ExternalLink />
+      <div className="button-section">
+        <ScrollToTopButton />
+      </div>
     </div>
   );
 }

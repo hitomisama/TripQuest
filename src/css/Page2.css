@@ -1,0 +1,23 @@
+.TTL_mv {
+    background-image: url(/resetimg.png);
+    background-repeat: no-repeat;
+    height: 417px;
+    flex-shrink: 0;
+}
+
+.page2-ttl {
+    display: flex;
+    flex-direction: column; /* 按钮纵向排列 */
+    align-items: flex-start; /* 按钮对齐到右侧 */
+    margin-left: 30px;
+    margin-top: 140px;
+}
+
+.page2-ttl p{
+    margin-left: 9px;
+}
+
+.Introduction{
+    margin-top: 35px;
+    margin: 35px 50px;
+}
