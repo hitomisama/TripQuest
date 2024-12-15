@@ -8,6 +8,7 @@
     /* 平滑过渡 */
     position: relative; /* 默认非固定状态 */
     background-color: transparent; /* 背景透明 */
+    margin: 0 auto;
   }
   
   .menu {

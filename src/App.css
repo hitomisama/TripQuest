@@ -7,7 +7,7 @@ body {
     font-size: 18px;
     background-color: #083300;
     max-width: 393px;
-    margin: 0;
+    margin: 0 auto;
     overflow-x: hidden;
     /* 禁止水平滚动 */
     font-family: 'Zen Old Mincho', '';
@@ -117,16 +117,13 @@ h6 {
     width: 400px;
 }
 
-
+/* 
 .gotorest {
     margin: 40px 60px;
     gap: 10px;
-}
+} */
 
-.gotorest span {
-    border-right: 1px solid white;
 
-}
 
 .btn {
     display: flex;
@@ -134,7 +131,7 @@ h6 {
     align-items: center;
     border: 1px solid white;
     /* 按钮边框 */
-    padding: 10px 20px;
+    padding: 10px 10px;
     /* 调整按钮内边距 */
     border-radius: 20px;
     /* 圆角效果 */
@@ -144,6 +141,16 @@ h6 {
     /* 按钮文字颜色 */
     transition: background-color 0.3s ease, color 0.3s ease;
     /* 添加过渡效果 */
+    margin-top: 43px;
+    margin-right: 5px;
+    margin-left: 169px;
+}
+
+.btn h4 {
+    border-right: 1px solid white;
+    letter-spacing: 1.62px;
+    margin: 0;
+    padding-right: 10px;
 }
 
 .btn:hover {
