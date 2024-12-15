@@ -7,17 +7,87 @@
 
 .page2-ttl {
     display: flex;
-    flex-direction: column; /* 按钮纵向排列 */
-    align-items: flex-start; /* 按钮对齐到右侧 */
+    flex-direction: column;
+    /* 按钮纵向排列 */
+    align-items: flex-start;
+    /* 按钮对齐到右侧 */
     margin-left: 30px;
     margin-top: 140px;
 }
 
-.page2-ttl p{
+.page2-ttl p {
     margin-left: 9px;
 }
 
-.Introduction{
+.Introduction {
     margin-top: 35px;
     margin: 35px 50px;
 }
+
+.map_ttl {
+    border-bottom: 1px solid #FFFFFF80;
+    margin-left: 29px;
+    margin-right: 193px;
+}
+
+.map {
+    margin: auto 40px;
+}
+
+
+.step-content {
+    padding: 20px 27px;
+}
+
+.step-container{
+    margin-top: 70px;
+    margin-bottom: 480px;
+    position: relative;
+}
+
+.step-content-moji {
+    margin: auto 22px;
+    position: absolute; /* 绝对定位 */
+    top: 240px; /* 距离容器底部 10px */
+    left: 5%; /* 距离容器右侧 10px */
+}
+
+.step-container img {
+    margin: 0;
+}
+
+.step-content {
+    background-color: #0B5609;
+    border: 1px solid #FFFFFF80;
+    border-radius: 20px;
+}
+
+.step-content h5{}
+
+.step-container-ttl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    border-bottom: 1px solid #FFFFFF80;
+
+
+}
+
+.step-container-ttl-sub {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
+
+}
+
+.step-container-ttl-sub h4 {
+    margin: 0;
+}
+
+.stepBtn{
+    margin-left: 120px;
+    margin-top: 50px;
+}
+

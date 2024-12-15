@@ -10,7 +10,9 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     /* 禁止水平滚动 */
-    font-family: 'Zen Old Mincho', '';
+    font-family: 'Zen Old Mincho';
+    -webkit-font-smoothing: antialiased; /* 使字体更清晰 */
+    text-rendering: optimizeLegibility; /* 优化字形 */
 }
 
 img {
@@ -26,7 +28,7 @@ a {
 }
 
 h1 {
-    font-size: 34px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -34,7 +36,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28pt;
+    font-size: 24pt;
     font-weight: 400;
 }
 
@@ -51,8 +53,7 @@ h4 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 10px;
-    color: white;
+    letter-spacing: 1.62px;
 }
 
 h5 {
@@ -60,8 +61,7 @@ h5 {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 150%;
-    /* 21px */
+    line-height: 150%; /* 21px */
     letter-spacing: 3.92px;
 }
 

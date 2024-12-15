@@ -12,7 +12,7 @@ function Step() {
   const navigate = useNavigate(); // 初始化导航函数
 
   return (
-    <>
+    <div className="steps-wrapper">
       {stepDate.map((step, index) => {
         // 获取对应的按钮目标
         const buttonTarget = stepBtn.find(
@@ -21,24 +21,42 @@ function Step() {
 
         return (
           <div key={index} className="step-container">
-            <h2>{step.Ttl}</h2> {/* 渲染副标题 */}
-            <h3>{step.sub}</h3> {/* 渲染主标题 */}
-            {step.Ttl2 && <h4>{step.Ttl2}</h4>} {/* 条件渲染 Ttl2 */}
-            {step.ttl3 && <h5>{step.ttl3}</h5>} {/* 条件渲染 ttl3 */}
-            <p>{step.content}</p> {/* 渲染内容 */}
-            {/* 动态渲染按钮 */}
-            {buttonTarget && (
-              <button
-                className="step-button"
-                onClick={() => navigate(buttonTarget.target)} // 使用 navigate 进行页面跳转
-              >
-                挑戦
-              </button>
-            )}
+            {/* 图片部分 */}
+            <div className="step-image-container">
+              <img src={step.img} alt={step.Ttl} className="step-image" />
+            </div>
+
+            {/* 内容部分 */}
+            <div className="step-content-moji">
+              <div className="step-content">
+                <div className="step-container-ttl">
+                  <h3>{step.Ttl}</h3>
+                  <p className="e1">{step.sub}</p>
+                </div>
+                <div className="step-container-ttl-sub">
+                  {step.Ttl2 && <h4>{step.Ttl2}</h4>}
+                  {step.ttl3 && <h4>{step.ttl3}</h4>}
+                </div>
+                
+                <h5>{step.content}</h5>
+
+                <div className="stepBtn">
+                  {buttonTarget && (
+                    <div
+                      className="btn"
+                      onClick={() => navigate(buttonTarget.target)}
+                    >
+                      <h4>挑戦</h4>
+                      <div className="arrow"></div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

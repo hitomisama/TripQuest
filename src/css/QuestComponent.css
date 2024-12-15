@@ -3,13 +3,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  position: relative; /* 确保子元素的绝对定位是相对于父容器 */
 }
 
+.quest-title{
+  background-color: #154603;
+  position: absolute;
+  z-index: 2;
+  top: -15px;
+  left: -16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .quest-title h5 {
   font-size: 18px;
-  margin: 10px 0;
-  color: #154603;
+  padding: 10px;
+  margin: 0;
 }
 
 .quest-list {
@@ -34,10 +42,13 @@
   overflow: hidden;
 }
 
+.quest-item.uploaded .quest-label {
+  color: white; /* 上传图片后文字变白 */
+}
+
 .quest-label {
   position: absolute;
   top: 40%;
-  /* left: 50%; */
   font-weight: bold;
   color: #154603;
   text-align: center;
@@ -46,6 +57,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  z-index: 2; /* 保证文字在遮盖层上方 */
 }
 
 .quest-image-container {
@@ -54,20 +66,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  border-radius: 8px;
+  background-color: #f0f0f0; /* 默认背景色 */
   overflow: hidden;
-}
-
-.quest-image-container.placeholder {
-  background-color: #f0f0f0;
-  border: 2px dashed #ccc;
+  position: relative;
 }
 
 .quest-image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+}
+
+.quest-image.default {
+  width: auto; /* 使用图片的原始宽度 */
+  height: auto; /* 使用图片的原始高度 */
+  max-width: 100%; /* 限制图片最大宽度不超过容器 */
+  max-height: 100%; /* 限制图片最大高度不超过容器 */
+}
+
+.quest-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 黑色透明遮盖 */
+  z-index: 1; /* 遮盖层在图片上方 */
 }
 
 .quest-clear-message {
@@ -75,13 +100,18 @@
   padding: 10px 20px;
   color: white;
   background-color: #154603;
-  border-radius: 5px;
   text-align: center;
 }
 
 .quest-footer {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
+  margin-top: 5px;
+  margin-left: 200px;
+}
+
+.ok-image {
+  display: block; /* 确保图片占一行 */
+  margin: 5px auto 0; /* 距离文字 5px，水平居中 */
+  width: 20px; /* 设置图片宽度 */
+  height: auto; /* 自适应高度 */
+  object-fit: contain; /* 保持图片比例 */
 }

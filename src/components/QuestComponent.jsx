@@ -19,12 +19,35 @@ function QuestComponent() {
         className={`quest-list ${allTasksCompleted ? "completed-overlay" : ""}`}
       >
         {tasks.map((task, index) => (
-          <div key={task.id} className="quest-item">
+          <div
+            key={task.id}
+            className={`quest-item ${task.image !== "/LOGO.png" ? "uploaded" : ""}`}
+          >
             {/* 标号与特殊名称 */}
             {index === 4 ? (
-              <span className="quest-label">立ち寄りスポット<br />（一つ）</span>
+              <span className="quest-label">
+                立ち寄りスポット<br />（一つ）
+                {/* 上传图片后显示 ok.png */}
+                {task.image !== "/LOGO.png" && (
+                  <img
+                    src="/ok.png" // 指定的图片路径
+                    alt="完成标志"
+                    className="ok-image"
+                  />
+                )}
+              </span>
             ) : (
-              <span className="quest-label">クエスト {index + 1}</span>
+              <span className="quest-label">
+                クエスト {index + 1}
+                {/* 上传图片后显示 ok.png */}
+                {task.image !== "/LOGO.png" && (
+                  <img
+                    src="/ok.png" // 指定的图片路径
+                    alt="完成标志"
+                    className="ok-image"
+                  />
+                )}
+              </span>
             )}
             {/* 图片 */}
             <div
@@ -35,7 +58,7 @@ function QuestComponent() {
               <img
                 src={task.image}
                 alt={task.name}
-                className="quest-image"
+                className={`quest-image ${task.image === "/LOGO.png" ? "default" : ""}`}
               />
             </div>
           </div>
@@ -48,7 +71,7 @@ function QuestComponent() {
           全クエストクリア！タップして交換ページを開いてください。
         </div>
       ) : (
-        <div className="quest-footer">*クエストの順番は自由</div>
+        <h6 className="quest-footer">*クエストの順番は自由</h6>
       )}
     </div>
   );

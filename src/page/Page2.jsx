@@ -11,6 +11,7 @@ import Header from "../components/1_header.jsx";
 import ScrollToTopButton from "../btn/ScrollToTopButton.jsx";
 import ExternalLink from "../btn/ExternalLink.jsx";
 import "../css/Page2.css";
+import MapComponent from "../components/MapComponent.jsx";
 
 function Page2() {
   const { tasks } = useTaskContext();
@@ -30,7 +31,11 @@ function Page2() {
       <Ttl x={3} />
       <h5 className="Introduction">クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！</h5>
       <QuestComponent tasks={tasks} />
+      <h3 className="map_ttl">クエスト一覧</h3>
+      <MapComponent />
+      <Ttl x={4} />
       <Step />
+      <Ttl x={5} />
       <Accordion />
       <ExternalLink />
       <div className="button-section">

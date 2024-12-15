@@ -29,9 +29,8 @@ function Accordion() {
         <div key={item.id} className="accordion-item">
           {/* 标题部分 */}
           <div className="accordion-header" onClick={() => handleToggle(index)}>
-            <h3>
-              {index + 1 < 10 ? `0${index + 1}` : index + 1} {item.title}
-            </h3>
+            <h3>{index + 1 < 10 ? `0${index + 1}` : index + 1}</h3>
+            <h3> {item.title}</h3>
             <span className="accordion-arrow">
               {openIndex === index ? "▲" : "▼"}
             </span>
@@ -41,18 +40,20 @@ function Accordion() {
           {openIndex === index && (
             <div className="accordion-content">
               <img src={item.img} alt={item.title} className="accordion-img" />
-              <p>{item.content}</p>
+              <h5>{item.content}</h5>
 
-              <PhotoUploadModal taskId={5} onUpload={handleCapture} />
+              <div className="step-btn">
+                <PhotoUploadModal taskId={item.id} onUpload={handleCapture} />
 
-              {index + 4 <= locations.length && (
-                <>
-                  {console.log(
-                    `Rendering LocationList for renderId: ${index + 4}`
-                  )}
-                  <LocationList renderId={index + 4} />
-                </>
-              )}
+                {index + 4 <= locations.length && (
+                  <>
+                    {console.log(
+                      `Rendering LocationList for renderId: ${index + 4}`
+                    )}
+                    <LocationList renderId={index + 4} />
+                  </>
+                )}
+              </div>
             </div>
           )}
         </div>
