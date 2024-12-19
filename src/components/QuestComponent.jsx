@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTaskContext } from "../components/TaskContext.jsx";
 import "../css/QuestComponent.css";
+import QRModal from "./QRModal.jsx";
 
 function QuestComponent() {
   const { tasks } = useTaskContext();
+  const [isModalOpen, setIsModalOpen] = useState(false); // 控制 QRModal 的状态
 
   // 检查是否所有任务都有照片
   const allTasksCompleted = tasks.every((task) => task.image !== "/LOGO.png");
@@ -13,6 +15,16 @@ function QuestComponent() {
       <div className="quest-title">
         <h5>スペシャル抹茶券</h5>
       </div>
+
+      {/* 完成信息 */}
+      {allTasksCompleted && (
+        <h6
+          className="quest-clear-message"
+          onClick={() => setIsModalOpen(true)} // 点击时打开 QRModal
+        >
+          全クエストクリア！タップして交換ページを開いてください。
+        </h6>
+      )}
 
       {/* 照片显示区域 */}
       <div
@@ -27,10 +39,9 @@ function QuestComponent() {
             {index === 4 ? (
               <span className="quest-label">
                 立ち寄りスポット<br />（一つ）
-                {/* 上传图片后显示 ok.png */}
                 {task.image !== "/LOGO.png" && (
                   <img
-                    src="/ok.png" // 指定的图片路径
+                    src="/ok.png"
                     alt="完成标志"
                     className="ok-image"
                   />
@@ -39,17 +50,15 @@ function QuestComponent() {
             ) : (
               <span className="quest-label">
                 クエスト {index + 1}
-                {/* 上传图片后显示 ok.png */}
                 {task.image !== "/LOGO.png" && (
                   <img
-                    src="/ok.png" // 指定的图片路径
+                    src="/ok.png"
                     alt="完成标志"
                     className="ok-image"
                   />
                 )}
               </span>
             )}
-            {/* 图片 */}
             <div
               className={`quest-image-container ${
                 task.image === "/LOGO.png" ? "placeholder" : ""
@@ -65,14 +74,13 @@ function QuestComponent() {
         ))}
       </div>
 
-      {/* 完成信息 */}
-      {allTasksCompleted ? (
-        <div className="quest-clear-message">
-          全クエストクリア！タップして交換ページを開いてください。
-        </div>
-      ) : (
+      {/* 如果未完成，显示提示 */}
+      {!allTasksCompleted && (
         <h6 className="quest-footer">*クエストの順番は自由</h6>
       )}
+
+      {/* QRModal */}
+      <QRModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

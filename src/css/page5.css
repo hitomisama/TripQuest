@@ -1,0 +1,17 @@
+.pg5_mv {
+    background-image: url(/step3.png);
+    background-repeat: no-repeat;
+    height: 417px;
+    flex-shrink: 0;
+}
+
+.pg5_mv p {
+    font-family: "Zen Old Mincho";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    margin-left: 0;
+    margin-top: 10px;
+}

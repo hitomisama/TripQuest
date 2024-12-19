@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom"; // 导入 useNavigate
 import Ttl from "../components/4_ttl.jsx";
 import HTP from "../components/6_HTP.jsx";
@@ -17,19 +17,27 @@ import { Link } from "react-router-dom"; // 引入 Link 组件用于跳转
 import ExternalLink from "../btn/ExternalLink.jsx";
 
 
+
 function Page1() {
+  
+  
   return (
     <div className="page1-container">
       {/* 主视觉模块 */}
+      
       <div className="fb">
+      <div className="bjimage"></div>
+      <div className="oneheader">
         <Header />
+      </div>
+        
         <MV />
       </div>
       <ImageDivide />
       <Header2 />
       <ScrollTracker />
       {/* 介绍模块 */}
-      <div className="WTQ">
+      <div className="WTQ" id="WTQ">
         <Ttl x={0} />
         <h5>
           <p>
@@ -42,7 +50,7 @@ function Page1() {
       </div>
 
       {/* HTP 模块 */}
-      <div className="HTP">
+      <div className="HTP" id="HTP">
         <Ttl x={1} />
         <HTP />
       </div>

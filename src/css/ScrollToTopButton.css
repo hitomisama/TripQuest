@@ -1,11 +1,11 @@
 .scroll-to-top-container {
     position: fixed;
     bottom: 20px; /* 距离底部 20px */
-    right: 20px; /* 距离右侧 20px */
+    /* right: 20px; 距离右侧 20px */
     width: 50px; /* 按钮宽度 */
     height: 50px; /* 按钮高度 */
     cursor: pointer;
-    z-index: 1000; /* 保证它在最上层 */
+    z-index: 10000; /* 保证它在最上层 */
     display: flex;
     align-items: center;
     justify-content: center;

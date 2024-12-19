@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom"; // 引入 Link 组件用于跳转
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useTaskContext } from "../components/TaskContext.jsx";
 import Ttl from "../components/4_ttl.jsx";
 import ButtonList from "../components/ButtonList.jsx";
@@ -8,60 +8,67 @@ import buttonData from "../Date/btnDate.json";
 import Top from "../components/Top.jsx";
 import QuestCotent from "../components/questcontent.jsx";
 import SpotList from "../windows/SpotList.jsx";
-import PhotoUploadModal from "../windows/PhotoUploadModal.jsx";
 import LocationList from "../btn/LocationList.jsx";
 import Header2 from "../components/header2.jsx";
 import Header from "../components/1_header.jsx";
+import "../css/page3.css";
 
 function Page3() {
+  
   const { tasks, setTasks } = useTaskContext();
 
   const handleCapture = (taskId, base64Image) => {
-    // console.log(`Uploading image for Task ${taskId}:`, base64Image); // 检查 Base64 数据是否正确
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === taskId ? { ...task, image: base64Image } : task
       )
     );
-    console.log("Updated tasks state:", tasks); // 确认任务列表是否正确更新
+    console.log("Updated tasks state:", tasks);
   };
 
-  console.log("Rendering Page3 with tasks:", tasks);
+  useEffect(() => {
+    window.scrollTo(0, 0); // 页面加载时滚动到顶部
+  }, []);
 
   return (
     <>
-      <Header />
-      <div className="top">
-        <Top x={1} />
+      <div className="pg3_mv">
+        <Header />
+        <div className="top">
+          <Top x={1} />
+        </div>
       </div>
       <Header2 />
+
       <Ttl x={6} />
       <LocationList renderId={1} />
-      <div className="quest-section">
-        <QuestCotent x={0} />
-        <PhotoUploadModal taskId={1} onUpload={handleCapture} />
 
-        <QuestCotent x={1} />
-        <PhotoUploadModal taskId={2} onUpload={handleCapture} />
+      {/* 任务区域 */}
+      <div className="quest-section">
+        <QuestCotent x={0} taskId={1} onUpload={handleCapture} />
+        <QuestCotent x={1} taskId={2} onUpload={handleCapture} />
       </div>
 
       <SpotList x={0} isAccordion={true} />
 
       {/* 跳转按钮 */}
-      <div className="stepleft">
-        <Link to="/Page5" style={{ textDecoration: "none", fontSize: "18px" }}>
-          <p className="e1">⬅️ Stp3</p>
+      <div className="pagebtn">
+      <Link to="/Page5" className="stepleft">
+        <div className="arrowleft"></div>
+          <p className="e1">Step3</p>
         </Link>
-      </div>
-      <div className="setpright">
-        <Link to="/Page4" style={{ textDecoration: "none", fontSize: "18px" }}>
-          <p className="e1">Stp2 →</p>
+        <Link to="/Page4" className="stepright">
+          <p className="e1">Step2</p>
+          <div className="arrowright"></div>
         </Link>
       </div>
 
-      <div className="page-footer">
-        <ButtonList buttonData={buttonData.filter((btn) => btn.id === "5")} />
-        <ButtonList buttonData={buttonData.filter((btn) => btn.id === "6")} />
+      {/* 页脚 */}
+      <div >
+        <Link to='/' className="pageTop">
+          <div className="pageTop-e1">Top</div>
+          <img src="/leaf.png" alt="" />
+        </Link>
       </div>
     </>
   );

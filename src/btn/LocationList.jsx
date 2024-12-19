@@ -9,10 +9,11 @@ function NavigateButton({ location }) {
   };
 
   return (
-    <div className="NavigationItem">
+    <div className="btn">
       <h4 className="navigate-button" onClick={handleNavigate}>
-        出発{location.name}
+        出発
       </h4>
+      <div className="arrow"></div>
     </div>
   );
 }

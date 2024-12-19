@@ -1,0 +1,28 @@
+.closebtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.QRcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.QRmoji{
+    margin: 2px;
+    color: black;
+}
+
+.QR{
+margin:20px;
+}
+
+.modal-content-QR{
+    background-color: white;
+    padding: 30px;
+}

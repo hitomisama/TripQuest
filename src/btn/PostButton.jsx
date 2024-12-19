@@ -2,9 +2,9 @@ import React from "react";
 
 function PostButton({ text, onClick }) {
   return (
-    <button className="post-button" onClick={onClick}>
+    <div className="btn" onClick={onClick}>
       {text}
-    </button>
+    </div>
   );
 }
 
