@@ -34,7 +34,10 @@ function Page2() {
       <h5 className="Introduction">クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！</h5>
       <QuestComponent tasks={tasks} />
       <h3 className="map_ttl" id="questList">クエスト一覧</h3>
-      <MapComponent />
+      <div className="map">
+        <img src="/map.png" alt="" />
+      {/* <MapComponent /> */}
+      </div>
       <Ttl x={4} />
       <Step />
       <Ttl x={5} />

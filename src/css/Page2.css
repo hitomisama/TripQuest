@@ -32,6 +32,14 @@
 
 .map {
     margin: auto 40px;
+
+}
+
+.map img{
+    width: 270px;
+    height: 183px;
+    flex-shrink: 0;
+    margin-top: 10px;
 }
 
 

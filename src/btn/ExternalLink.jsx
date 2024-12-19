@@ -4,7 +4,7 @@ import React from "react";
 function ExternalLink() {
   const handleClick = () => {
     // 使用 window.open 打开新页面
-    // window.open("https://www.baidu.com", "_blank", "noopener,noreferrer");
+    window.open("https://trip-quest.jp/#", "_blank", "noopener,noreferrer");
   };
 
   return (
