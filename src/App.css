@@ -110,7 +110,7 @@ h6 {
     left: 0;
     background-image: url(/mv_img.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     z-index: 0;
 }
 .fb {
