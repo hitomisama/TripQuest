@@ -26,6 +26,7 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   padding: 10px 0;
+  position: relative;
 }
 
 .quest-item {
@@ -96,11 +97,19 @@
 }
 
 .quest-clear-message {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 10px;
+  /* margin-bottom: 20px; */
+  /* padding: 10px 20px; */
   color: white;
-  background-color: #154603;
+  background-color:#3F4239CF;
   text-align: center;
+  /* border-radius: 5px; */
+  position: absolute;
+  z-index: 3;
+  top: 40px;
+  width: 346px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .quest-footer {

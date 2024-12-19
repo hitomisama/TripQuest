@@ -13,31 +13,31 @@ body {
     font-family: 'Zen Old Mincho';
     -webkit-font-smoothing: antialiased; /* 使字体更清晰 */
     text-rendering: optimizeLegibility; /* 优化字形 */
+    width: 100%;
+    height: 100%;
 }
 
-img {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    display: block;
-    /* 避免 inline-block 元素默认的间隙 */
-}
+
 
 a {
     text-decoration: none;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 4.94px;
+    color: white;
+
 }
 
 h2 {
     font-size: 24pt;
     font-weight: 400;
+    color: white;
+
 }
 
 h3 {
@@ -46,6 +46,8 @@ h3 {
     font-weight: 500;
     line-height: normal;
     letter-spacing: 1.44px;
+    color: white;
+
 }
 
 h4 {
@@ -54,6 +56,8 @@ h4 {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.62px;
+    color: white;
+
 }
 
 h5 {
@@ -63,6 +67,8 @@ h5 {
     font-weight: 400;
     line-height: 150%; /* 21px */
     letter-spacing: 3.92px;
+    color: white;
+
 }
 
 h6 {
@@ -71,6 +77,8 @@ h6 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    color: white;
+
 }
 
 .e1 {
@@ -81,6 +89,7 @@ h6 {
     line-height: 145.176%;
     /* 26.132px */
     letter-spacing: 3.78px;
+    color: white;
 }
 
 .English {
@@ -90,14 +99,44 @@ h6 {
     font-weight: 400;
     line-height: 145.176%; /* 17.421px */
     letter-spacing: 2.28px;
-}
+    color: white;
 
-.fb {
+}
+.bjimage{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-image: url(/mv_img.png);
     background-repeat: no-repeat;
+    background-position: center top; /* 设置背景图片水平和垂直居中 */
+    background-size: contain; 
+        z-index: 0;
 }
-
+.fb {
+   
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(/mv_img.png);
+    background-repeat: no-repeat;
+    transition: transform 2s ease; */
+    position: relative;
+    z-index: 2;
+   
+}
+.WTQ {
+    background-color: #083300;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    margin-top: -44px;
+}
 .WTQ h5 {
+    z-index: 2;
+    position: relative;
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -108,14 +147,24 @@ h6 {
 }
 
 .LGTTcontent {
+    position: relative;
+    z-index: 2;
     display: flex;
+    background-color: #083300;
 }
 
 .LGTTcontent img {
     margin-top: 53px;
     width: 400px;
 }
-
+.LGTT{
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #083300;
+    margin-top: -55px;
+}
 /* 
 .gotorest {
     margin: 40px 60px;
@@ -123,11 +172,15 @@ h6 {
 } */
 
 .button-section {
+    width: 393px;
+    position: relative;
+    z-index: 100;
     display: flex;
     flex-direction: column; /* 按钮纵向排列 */
     align-items: flex-end; /* 按钮对齐到右侧 */
     padding: 20px 10px; /* 调整内边距 */
     gap: 15px; /* 按钮之间的间距 */
+    background-color: #083300;
 }
 
 .btn {
@@ -150,6 +203,7 @@ h6 {
     padding-right: 15px; /* 调整文字和边框间距 */
     font-size: 18px; /* 调整文字大小 */
 }
+
 
 .btn .arrow {
     position: relative;
@@ -179,5 +233,19 @@ h6 {
 .btn .arrow::after {
     transform: rotate(-45deg); /* 逆时针旋转 */
     transform-origin: bottom right; /* 以右下角为旋转点 */
+}
+.HTP{
+    background-color: #083300;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: -53px;
+}
+.oneheader{
+    width: 393px;
+    position: fixed;
+    top: 0;
 }
 

@@ -8,10 +8,9 @@ function Modal({ isOpen, onClose, title, children }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-title">
-          <span>{title}</span>
-          <button className="modal-close" onClick={onClose}>
+          {/* <div className="modal-close" onClick={onClose}>
             ×
-          </button>
+          </div> */}
         </div>
 
         <div className="modal-body">{children}</div>

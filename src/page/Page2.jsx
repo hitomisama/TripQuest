@@ -28,10 +28,12 @@ function Page2() {
         <Top x={0} />
       </div>
       <Header2 />
+      <div id="startReset">
       <Ttl x={3} />
+      </div>
       <h5 className="Introduction">クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！</h5>
       <QuestComponent tasks={tasks} />
-      <h3 className="map_ttl">クエスト一覧</h3>
+      <h3 className="map_ttl" id="questList">クエスト一覧</h3>
       <MapComponent />
       <Ttl x={4} />
       <Step />

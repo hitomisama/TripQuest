@@ -13,12 +13,12 @@ function CameraButton({ taskId, onCapture }) {
 
   return (
     <div className="camera-container">
-      <button
-        className="camera-button"
+      <div
+        className="btn"
         onClick={() => fileInputRef.current.click()}
       >
         写真を撮る
-      </button>
+      </div>
       <input
         type="file"
         accept="image/*"

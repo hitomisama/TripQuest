@@ -1,14 +1,16 @@
 footer {
+    z-index: 2;
+    position: relative;
     display: flex;
     justify-content: center; /* 水平居中 */
     align-items: center; /* 垂直居中 */
     gap: 20px; /* 各元素间距 */
-    background-color: #154603; /* 背景色 */
+    background-color: #154603; /* 背景色 083300*/
     padding: 40px; /* 内边距 */
     color: white; /* 字体颜色 */
     font-size: 14px; /* 字体大小 */
     font-family: 'Zen Old Mincho', serif; /* 字体样式 */
-    margin-top: 90px;
+    /* margin-top: 90px; */
 }
 
 /* 链接样式（如果需要点击） */

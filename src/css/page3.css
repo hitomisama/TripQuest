@@ -1,0 +1,182 @@
+.pg3_mv {
+    background-image: url(/step1.png);
+    background-repeat: no-repeat;
+    height: 417px;
+    flex-shrink: 0;
+}
+
+.pg3_mv p {
+    font-family: "Zen Old Mincho";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.44px;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.NavigationContent {
+    margin-left: 210px;
+    margin-right: 26px;
+}
+
+.NavigationContent h4 {
+    padding-right: 20px;
+}
+
+.pagebtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+/*======右箭头================*/
+.stepright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.stepright p {
+    border-right: 1px solid white;
+    padding-right: 10px;
+    margin: 5px 10px;
+
+}
+
+.stepright .arrowright {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    /* 箭头的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头主线颜色 */
+    margin-right: 10px;
+    /* 调整箭头与文字的距离 */
+}
+
+.stepright .arrowright::before,
+.stepright .arrowright::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 1px;
+    background-color: white;
+    top: 0;
+    right: 0;
+}
+
+.stepright .arrowright::before {
+    transform: rotate(45deg);
+    /* 顺时针旋转 */
+    transform-origin: top right;
+    /* 以右上角为旋转点 */
+}
+
+.stepright .arrowright::after {
+    transform: rotate(-45deg);
+    /* 逆时针旋转 */
+    transform-origin: bottom right;
+    /* 以右下角为旋转点 */
+}
+
+/*======右箭头================*/
+
+/*======左箭头================*/
+.stepleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.stepleft p {
+    border-left: 1px solid white;
+    padding-left: 10px;
+    margin: 10px;
+    margin: 5px 10px;
+}
+
+.stepleft .arrowleft {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    /* 箭头的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头主线颜色 */
+    margin-left: 10px;
+    /* 调整箭头与文字的距离 */
+}
+
+.stepleft .arrowleft::before,
+.stepleft .arrowleft::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    /* 箭头斜线的长度 */
+    height: 1px;
+    /* 箭头线条的粗细 */
+    background-color: white;
+    /* 箭头颜色 */
+    top: 0;
+    /* 对齐到主线 */
+    left: 0;
+    /* 靠右绘制箭头 */
+}
+
+.stepleft .arrowleft::before {
+    transform: rotate(45deg);
+    /* 顺时针旋转 */
+    transform-origin: top left;
+    /* 以右上角为旋转点 */
+}
+
+.stepleft .arrowleft::after {
+    transform: rotate(-45deg);
+    /* 逆时针旋转 */
+    transform-origin: bottom left;
+    /* 以右下角为旋转点 */
+}
+
+/*======左箭头================*/
+
+.pageTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 230px;
+    margin-right: 35px;
+    margin-top: 74px;
+}
+
+.pageTop-e1 {
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 145.176%;
+    letter-spacing: 3.78px;
+    color: white;
+    border-right: 1px solid white;
+    margin: 5px;
+    padding: 1px 10px;
+}
+
+.pageTop img {
+    width: 16px;
+    height: 15px;
+    flex-shrink: 0;
+    margin: 10px;
+}

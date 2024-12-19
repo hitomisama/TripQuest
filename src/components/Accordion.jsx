@@ -43,8 +43,7 @@ function Accordion() {
               <h5>{item.content}</h5>
 
               <div className="step-btn">
-                <PhotoUploadModal taskId={item.id} onUpload={handleCapture} />
-
+                {/* <PhotoUploadModal taskId={item.id} onUpload={handleCapture} /> */}
                 {index + 4 <= locations.length && (
                   <>
                     {console.log(

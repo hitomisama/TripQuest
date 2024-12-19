@@ -13,12 +13,12 @@ function UploadButton({ taskId, onUpload }) {
 
   return (
     <div className="upload-container">
-      <button
-        className="upload-button"
+      <div
+        className="btn-upload"
         onClick={() => fileInputRef.current.click()} // 模拟点击文件输入框
       >
-       タップしてアプロッド
-      </button>
+        タップしてアプロッド
+      </div>
       <input
         type="file"
         accept="image/*"

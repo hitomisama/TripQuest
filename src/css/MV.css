@@ -1,6 +1,29 @@
 /* @media (max-width: 393px) { */
 
 
+.mv_moji{
+    margin-top: 100px;
+    width: 393px;
+    z-index: 1;
+    position: fixed;
+    display: block;
+    
+}
+.trueopacity{
+    width: 393px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.falesopacity{
+    width: 393px;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+.mv_moji2{
+    
+    width: 200px;
+    height: 850px;
+}
 .kamakura {
     display: flex;
     flex-shrink: 0;
@@ -50,6 +73,8 @@
 }
 
 .pg2 {
+    position: relative;
+    z-index: 2;
     writing-mode: vertical-rl;
     /* 垂直排版，文字从右到左 */
     text-orientation: upright;
