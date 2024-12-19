@@ -1,48 +1,41 @@
 .Header2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 12px;
-    z-index: 1000; /* 确保 Header 在最上方 */
-    /* transition: all 0.3s ease;  */
-    /* 平滑过渡 */
-    position: relative; /* 默认非固定状态 */
-    /* background-color: transparent; 背景透明 */
-    background-color: #083300;
-    margin: 0 auto;
-    
-  }
-  
-  .menu {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    border-radius: 20px;
-    border: 1px solid #FFF;
-    padding: 8px 12px;
-  }
-  
-  .menu img {
-    width: 16px;
-    height: 15px;
-    border-right: 1px solid #fff;
-    padding-right: 8px;
-  }
-  
-  .menu p {
-    color: #fff;
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  /* 当 Header 固定时的样式 */
-  .Header2.sticky {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 369px;
-    background-color: #003307; /* 固定时背景颜色 */
-    padding: 20px 12px; /* 保持与非固定状态一致的 padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 12px;
+  z-index: 1000; /* 确保 Header 在最上方 */
+  position: sticky; /* 使用 sticky 实现滚动时的固定 */
+  top: 0; /* 距离顶部 */
+  right: 0;
+  left: 0;
+  background-color: #003307; /* 背景颜色 */
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加微小的阴影效果 */
+}
 
-  }
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
+  border: 1px solid #FFF;
+  padding: 8px 12px;
+}
+
+.menu img {
+  width: 16px;
+  height: 15px;
+  border-right: 1px solid #fff;
+  padding-right: 8px;
+}
+
+.menu p {
+  color: #fff;
+  margin: 0;
+  font-size: 14px;
+}
+
+.TripQuest {
+  height: 30px; /* 调整 Logo 大小 */
+  object-fit: contain;
+}
