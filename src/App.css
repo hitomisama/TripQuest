@@ -110,9 +110,8 @@ h6 {
     left: 0;
     background-image: url(/mv_img.png);
     background-repeat: no-repeat;
-    background-position: center top; /* 设置背景图片水平和垂直居中 */
-    background-size: contain; 
-        z-index: 0;
+    background-position: center;
+    z-index: 0;
 }
 .fb {
    
