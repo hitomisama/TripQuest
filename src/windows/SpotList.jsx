@@ -104,7 +104,7 @@ function SpotList({ x, isAccordion = false }) {
                   <p>{item.content}</p>
                   <div className="spot-btn">
                     <PhotoUploadModal taskId={5} onUpload={handleCapture} />
-                    <LocationList renderId={item.id + 3} />
+                    {/* <LocationList renderId={item.id + 3} /> */}
                   </div>
                 </div>
               )}
