@@ -6,7 +6,7 @@ body {
     color: white;
     font-size: 18px;
     background-color: #083300;
-    max-width: 395px;
+    /* max-width: 395px; */
     margin: 0 auto;
     overflow-x: hidden;
     /* 禁止水平滚动 */
@@ -171,7 +171,7 @@ h6 {
 } */
 
 .button-section {
-    width: 393px;
+    /* width: 393px; */
     position: relative;
     z-index: 100;
     display: flex;
