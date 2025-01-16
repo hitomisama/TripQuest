@@ -25,6 +25,7 @@ function Page2() {
     <div className="page2-container">
       <div className="TTL_mv">
         <Header />
+        <img src="/resetimg.png" alt="" className="TTL_mv_img"/>
         <Top x={0} />
       </div>
       <Header2 />

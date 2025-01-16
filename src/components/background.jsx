@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Back.css'; // 引入样式文件
 
 function Back() {
@@ -14,18 +15,23 @@ function Back() {
   }, [images.length]);
 
   return (
-    <div className="mv_new">
-      <ul>
-        {images.map((image, index) => (
-          <li
-            key={index}
-            className={index === currentIndex ? "active" : "hidden"}
-          >
-            <img src={image} alt={`Slide ${index + 1}`} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    
+    <>
+
+      
+      <div className="mv_new">
+        
+              <ul>
+                  {images.map((image, index) => (
+                      <li
+                          key={index}
+                          className={index === currentIndex ? "active" : "hidden"}
+                      >
+                          <img src={image} alt={`Slide ${index + 1}`} />
+                      </li>
+                  ))}
+              </ul>
+          </div></>
   );
 }
 

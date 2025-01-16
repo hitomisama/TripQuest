@@ -1,8 +1,12 @@
 .TTL_mv {
-    background-image: url(/resetimg.png);
-    background-repeat: no-repeat;
+    /* background-image: url(/resetimg.png); */
+    /* background-repeat: no-repeat;
     height: 417px;
-    flex-shrink: 0;
+    flex-shrink: 0; */
+}
+
+.TTL_mv_img{
+    width: 100%;
 }
 
 .page2-ttl {
