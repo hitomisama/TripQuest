@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../css/MV.css";
 
-function MV() {
+function  MV() {
   const mvmoji2 = useRef(null); // 引用 Header2 元素
   const pageTwo = useRef(null); // 用于占位的元素
   const isshow = useRef(false)

@@ -8,7 +8,7 @@
     z-index: 2;
 }
 
-.ImageDivide {
+.ImageDivide {  
     display: flex;
     white-space: nowrap; /* 禁止换行 */
     overflow-x: hidden; 

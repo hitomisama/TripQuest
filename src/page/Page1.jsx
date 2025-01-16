@@ -15,6 +15,7 @@ import ScrollTracker from "../components/ScrollTracker.jsx";
 import ScrollToTopButton from "../btn/ScrollToTopButton.jsx";
 import { Link } from "react-router-dom"; // 引入 Link 组件用于跳转
 import ExternalLink from "../btn/ExternalLink.jsx";
+import Back from "../components/background.jsx";
 
 
 
@@ -28,11 +29,12 @@ function Page1() {
       <div className="fb">
       <div className="bjimage"></div>
       <div className="oneheader">
-        <Header />
+      <Header />
+      <Back />
       </div>
-        
         <MV />
       </div>
+      
       <ImageDivide />
       <Header2 />
       <ScrollTracker />

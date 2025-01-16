@@ -85,7 +85,7 @@
 .quest {
     color: rgba(245, 245, 245, 0.30);
     /* 背景の見出し */
-    font-family: "Noto Sans";
+    /* font-family: "Noto Sans"; */
     font-size: 96px;
     font-style: normal;
     font-weight: 400;
