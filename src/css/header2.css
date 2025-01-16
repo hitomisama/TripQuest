@@ -36,6 +36,5 @@
 }
 
 .TripQuest {
-  height: 30px; /* 调整 Logo 大小 */
   object-fit: contain;
 }

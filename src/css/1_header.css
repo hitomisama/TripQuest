@@ -6,12 +6,11 @@ z-index: 3;
 }
 
 .TripQuest {
-    width: 100px;
-    height: auto;
+    height: 25px;
     flex-shrink: 0;
+    flex-grow: 1;
 }
 
 .Logo{
-    width: 50%;
-    height: auto;
+    height: 70px;
 }
