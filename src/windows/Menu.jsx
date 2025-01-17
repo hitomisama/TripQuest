@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import "../css/Menu.css";
-
 function Menu({ isOpen, onClose }) {
   const navigate = useNavigate();
 
@@ -14,6 +14,14 @@ function Menu({ isOpen, onClose }) {
 
   return (
     <div className="menu-overlay" onClick={onClose}>
+              <div className="menu_header">
+        <Link to="/">
+          <img src="/TripQuest.png" alt="TripQuest" className="TripQuest" />
+        </Link>
+        <Link to="/">
+          <img src="/LOGO.png" alt="Logo" className="Logo" />
+        </Link>
+        </div>
       <div className="menu-content" onClick={(e) => e.stopPropagation()}>
         <h1 className="menuttl">旅・リセット</h1>
         <h4 className="menulink" onClick={() => handleMenuClick("/", "WTQ")}>

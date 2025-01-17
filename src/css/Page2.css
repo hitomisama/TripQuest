@@ -7,6 +7,7 @@
 
 .TTL_mv_img{
     width: 100%;
+    position: relative;
 }
 
 .page2-ttl {
@@ -15,8 +16,12 @@
     /* 按钮纵向排列 */
     align-items: flex-start;
     /* 按钮对齐到右侧 */
-    margin-left: 30px;
-    margin-top: 140px;
+    /* margin-left: 30px; */
+    /* margin-top: 140px; */
+    position: absolute;
+    z-index: 7;
+    top: 240px;
+    left: 10px;
 }
 
 .page2-ttl p {
@@ -35,8 +40,9 @@
 }
 
 .map {
-    margin: auto 40px;
-
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .map img{

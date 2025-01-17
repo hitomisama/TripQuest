@@ -25,19 +25,24 @@ function Page2() {
     <div className="page2-container">
       <div className="TTL_mv">
         <Header />
-        <img src="/resetimg.png" alt="" className="TTL_mv_img"/>
+
+        <img src="/resetimg.png" alt="" className="TTL_mv_img" />
         <Top x={0} />
       </div>
       <Header2 />
       <div id="startReset">
-      <Ttl x={3} />
+        <Ttl x={3} />
       </div>
-      <h5 className="Introduction">クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！</h5>
+      <h5 className="Introduction">
+        クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！
+      </h5>
       <QuestComponent tasks={tasks} />
-      <h3 className="map_ttl" id="questList">クエスト一覧</h3>
+      <h3 className="map_ttl" id="questList">
+        クエスト一覧
+      </h3>
       <div className="map">
         <img src="/map.png" alt="" />
-      {/* <MapComponent /> */}
+        {/* <MapComponent /> */}
       </div>
       <Ttl x={4} />
       <Step />
