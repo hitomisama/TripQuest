@@ -60,16 +60,10 @@ function Page1() {
       {/* 三步说明模块 */}
       <div className="LGTT">
         <Ttl x={2} />
-        {/* <h3 className="LGTT_ttl">
-          <p>心をリセットの</p>
-          <p>３ステップ</p>
-        </h3> */}
-        <div className="LGTTcontent">
-          {/* <img src="/LGTTimg.png" alt="心をリセットの3ステップ" />
-          <img src="/LGTTimg2.png" alt="" /> */}
-          {/* <LGTT /> */}
+        {/* <div className="LGTTcontent">
           <img src="/LGTTimg3.png" alt="" />
-        </div>
+        </div> */}
+        <img src="LGTTnew.jpg" alt="" className="LGTTnew"/>
       </div>
 
       {/* 按钮区域 */}

@@ -41,11 +41,12 @@ function HTP() {
       <section className="HTPContent">
         {HtpData.map((item, index) => (
           <div key={index} className="HTPTtem">
+
+            <div className="htpback">
+            <img src={item.src} alt="contentimg" />
             <div className="point">
               <p className="e1">{item.pointNum}</p>
             </div>
-            <div className="htpback">
-            <img src={item.src} alt="contentimg" />
             <div className="HTPcontent">
             <h4>{item.ttl}</h4>
             <h5>{item.content}</h5>

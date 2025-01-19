@@ -1,6 +1,8 @@
 .HTPTtem {
     margin: 53px 35px;
-    position: relative; /* 确保 .point 是基于当前 .HTPTtem 定位 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .point {
@@ -14,8 +16,8 @@
     transform: rotate(-14.917deg);
     position: absolute; /* 绝对定位，基于 .HTPTtem 定位 */
     z-index: 2; /* 确保在标题和图片上方 */
-    top: -10px; /* 定位到标题的顶部 */
-    left: -6px; /* 定位到标题的左侧 */
+    top: 0px; /* 定位到标题的顶部 */
+    left: -35px; /* 定位到标题的左侧 */
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -58,4 +60,5 @@
 .htpback{
     background-color: #fff;
     width: 332px;
+    position: relative; 
 }
