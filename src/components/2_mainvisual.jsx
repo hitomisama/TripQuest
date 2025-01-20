@@ -5,10 +5,10 @@ function  MV() {
   const mvmoji2 = useRef(null); // 引用 Header2 元素
   const pageTwo = useRef(null); // 用于占位的元素
   const isshow = useRef(false)
-  const [isSticky, setIsSticky] = useState(false); // 是否固定状态
+  const [isSticky, setIsSticky] = useState(false); 
   const updatePosition = (scrollPercentage) => {
     const line = document.querySelector(".bdj::after");
-    const newHeight = 146 * scrollPercentage; // 根据滚动百分比计算高度
+    const newHeight = 146 * scrollPercentage;
     line.style.height = `${newHeight}px`;
     console.log(newHeight,'高度：');
     
@@ -22,11 +22,11 @@ function  MV() {
       if (pageTwo.current) {
         const headerTop = pageTwo.current.getBoundingClientRect().top; // 获取 Header 的顶部位置
         const placeholderTop = mvmoji2.current.getBoundingClientRect().top; // 占位元素的顶部位置
-        
+
+        pageTwo.current.style.opacity= Math.abs(placeholderTop)/1000;
         setIsSticky(headerTop < 1000 && placeholderTop < -100)
         
       }
-      
       
     };
 

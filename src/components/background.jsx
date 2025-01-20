@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../css/Back.css'; // 引入样式文件
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../css/Back.css"; // 引入样式文件
 
-function Back() {
-  const images = ["mv_img.png","mv1.png", "mv2.png", "mv3.png", "mv4.png"]; // 图片路径数组
+function Back({scrollTop}) {
+  const images = ["mv_img.png", "mv1.png", "mv2.png", "mv3.png", "mv4.png"]; // 图片路径数组
   const [currentIndex, setCurrentIndex] = useState(0); // 当前显示的图片索引
 
   useEffect(() => {
@@ -15,23 +15,30 @@ function Back() {
   }, [images.length]);
 
   return (
-    
     <>
-
-      
-      <div className="mv_new">
-        
-              <ul>
-                  {images.map((image, index) => (
-                      <li
-                          key={index}
-                          className={index === currentIndex ? "active" : "hidden"}
-                      >
-                          <img src={image} alt={`Slide ${index + 1}`} />
-                      </li>
-                  ))}
-              </ul>
-          </div></>
+      <div
+        className="mv_new"
+        data-top={scrollTop}
+        data-result={ 100 - Math.abs(scrollTop) / 750}
+        style={{
+          filter:
+            "brightness(" +
+            (scrollTop < -750 ? 50 : 100 - (Math.abs(scrollTop) / 750) * 50) +
+            "%)",
+        }}
+      >
+        <ul>
+          {images.map((image, index) => (
+            <li
+              key={index}
+              className={index === currentIndex ? "active" : "hidden"}
+            >
+              <img src={image} alt={`Slide ${index + 1}`} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }
 

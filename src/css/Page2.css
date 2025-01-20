@@ -13,14 +13,10 @@
 .page2-ttl {
     display: flex;
     flex-direction: column;
-    /* 按钮纵向排列 */
     align-items: flex-start;
-    /* 按钮对齐到右侧 */
-    /* margin-left: 30px; */
-    /* margin-top: 140px; */
     position: absolute;
     z-index: 7;
-    top: 240px;
+    top: 200px;
     left: 10px;
 }
 

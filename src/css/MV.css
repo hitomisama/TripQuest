@@ -3,7 +3,7 @@
 
 .mv_moji{
     margin-top: 100px;
-    /* width: 393px; */
+    width: 100vw;
     z-index: 1;
     position: fixed;
     display: block;
@@ -78,6 +78,8 @@
     /* 垂直排版，文字从右到左 */
     text-orientation: upright;
     /* 文字保持直立显示 */
+    opacity: 0;
+    margin: auto;
 }
 
 .ttl {
@@ -98,14 +100,14 @@
 }
 
 .pg2 h4 {
-    margin-right: 54px;
-    margin-left: 50px;
-    margin-bottom: 84px;
+    /* margin-right: 54px; */
+    /* margin-left: 50px; */
+    margin-bottom: 80px;
     margin-top: 80px;
 }
 
 .pg2 h4 p {
     width: 19px;
-    height: 770px;
+    /* height: 770px; */
     flex-shrink: 0;
 }
