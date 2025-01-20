@@ -105,3 +105,27 @@ justify-content: center;
     margin-top: 50px;
 }
 
+@keyframes fadeInFromBottom {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+/* 🔹 确保 `.page2-ttl` 不会被 `opacity: 0` 影响 */
+.page2-ttl {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: transform, opacity;
+}
+
+/* 🔹 进入视口后，动画生效 */
+.page2-ttl.fade-in {
+    opacity: 1 !important;
+    animation: fadeInFromBottom 1.2s ease-out forwards;
+}

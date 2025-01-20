@@ -1,5 +1,5 @@
 import { useTaskContext } from "../components/TaskContext.jsx";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import QuestComponent from "../components/QuestComponent.jsx";
 import Top from "../components/Top.jsx";
 import Header2 from "../components/header2.jsx";
@@ -21,14 +21,41 @@ function Page2() {
     window.scrollTo(0, 0); // 页面加载时滚动到顶部
   }, []);
 
+  // ✅ 监听 `Top` 组件的可视状态
+  const introRef = useRef(null);
+  const [introVisible, setIntroVisible] = useState(false);
+
+  useEffect(() => {
+    if (!introRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIntroVisible(true);
+          observer.disconnect(); // ✅ 避免重复触发
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(introRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="page2-container">
       <div className="TTL_mv">
         <Header />
-
-        <img src="/resetimg.png" alt="" className="TTL_mv_img" />
-        <Top x={0} />
+        <div>
+          <img src="/resetimg.png" alt="" className="TTL_mv_img"/>
+          {/* ✅ `ref` 绑定到 `.page2-ttl`，避免整个背景影响 */}
+          <div ref={introRef} className={`page2-ttl ${introVisible ? "fade-in" : ""}`}>
+            <Top x={0} />
+          </div>
+        </div>
       </div>
+
       <Header2 />
       <div id="startReset">
         <Ttl x={3} />
@@ -37,18 +64,18 @@ function Page2() {
         クエストを挑戦して、スぺシャル抹茶券を手に入れましょう！
       </h5>
       <QuestComponent tasks={tasks} />
-      <h3 className="map_ttl" id="questList">
-        クエスト一覧
-      </h3>
+
+      <h3 className="map_ttl" id="questList">クエスト一覧</h3>
       <div className="map">
         <img src="/map.png" alt="" />
-        {/* <MapComponent /> */}
       </div>
+
       <Ttl x={4} />
       <Step />
       <Ttl x={5} />
       <Accordion />
       <ExternalLink />
+
       <div className="button-section">
         <ScrollToTopButton />
       </div>
