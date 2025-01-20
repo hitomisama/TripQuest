@@ -30,6 +30,8 @@ function Page4() {
       <div className="pg4_mv">
         <Header />
         <div className="top">
+        <img src="/step2.png" alt="" className="TTL_mv_img"/>
+
           <Top x={2} />
         </div>
       </div>

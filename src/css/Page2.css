@@ -105,27 +105,131 @@ justify-content: center;
     margin-top: 50px;
 }
 
-@keyframes fadeInFromBottom {
+.TTL_mv {
+    /* background-image: url(/resetimg.png); */
+    /* background-repeat: no-repeat;
+    height: 417px;
+    flex-shrink: 0; */
+}
+
+.TTL_mv_img{
+    width: 100%;
+    position: relative;
+}
+
+.page2-ttl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 7;
+    top: 200px;
+    left: 10px;
+}
+
+.page2-ttl p {
+    margin-left: 9px;
+}
+
+.Introduction {
+    margin-top: 35px;
+    margin: 35px 50px;
+}
+
+.map_ttl {
+    border-bottom: 1px solid #FFFFFF80;
+    margin-left: 29px;
+    margin-right: 193px;
+}
+
+.map {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.map img{
+    width: 270px;
+    height: 183px;
+    flex-shrink: 0;
+    margin-top: 50px;
+}
+
+
+.step-content {
+    padding: 20px 27px;
+}
+
+.step-container{
+    margin-top: 70px;
+    margin-bottom: 480px;
+    position: relative;
+}
+
+.step-content-moji {
+    margin: auto 22px;
+    position: absolute; /* 绝对定位 */
+    top: 240px; /* 距离容器底部 10px */
+    left: 5%; /* 距离容器右侧 10px */
+}
+
+.step-container img {
+    margin: 0;
+}
+
+.step-content {
+    background-color: #0B5609;
+    border: 1px solid #FFFFFF80;
+    border-radius: 20px;
+}
+
+.step-content h5{}
+
+.step-container-ttl {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    border-bottom: 1px solid #FFFFFF80;
+
+
+}
+
+.step-container-ttl-sub {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
+
+}
+
+.step-container-ttl-sub h4 {
+    margin: 0;
+}
+
+.stepBtn{
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+/* @keyframes fadeInFromBottom {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
-}
-
-/* 🔹 确保 `.page2-ttl` 不会被 `opacity: 0` 影响 */
-.page2-ttl {
+  }
+  
+  .page2-ttl {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    will-change: transform, opacity;
-}
-
-/* 🔹 进入视口后，动画生效 */
-.page2-ttl.fade-in {
-    opacity: 1 !important;
-    animation: fadeInFromBottom 1.2s ease-out forwards;
-}
+  }
+  
+  .page2-ttl.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  } */

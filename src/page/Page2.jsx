@@ -22,26 +22,26 @@ function Page2() {
   }, []);
 
   // ✅ 监听 `Top` 组件的可视状态
-  const introRef = useRef(null);
-  const [introVisible, setIntroVisible] = useState(false);
+  // const introRef = useRef(null);
+  // const [introVisible, setIntroVisible] = useState(false);
 
-  useEffect(() => {
-    if (!introRef.current) return;
+  // useEffect(() => {
+  //   if (!introRef.current) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIntroVisible(true);
-          observer.disconnect(); // ✅ 避免重复触发
-        }
-      },
-      { threshold: 0.5 }
-    );
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       if (entries[0].isIntersecting) {
+  //         setIntroVisible(true);
+  //         observer.disconnect(); 
+  //       }
+  //     },
+  //     { threshold: 0.5 }
+  //   );
 
-    observer.observe(introRef.current);
+  //   observer.observe(introRef.current);
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <div className="page2-container">
@@ -49,10 +49,9 @@ function Page2() {
         <Header />
         <div>
           <img src="/resetimg.png" alt="" className="TTL_mv_img"/>
-          {/* ✅ `ref` 绑定到 `.page2-ttl`，避免整个背景影响 */}
-          <div ref={introRef} className={`page2-ttl ${introVisible ? "fade-in" : ""}`}>
+          {/* <div ref={introRef} className={`page2-ttl ${introVisible ? "fade-in" : ""}`}> */}
             <Top x={0} />
-          </div>
+          {/* </div> */}
         </div>
       </div>
 

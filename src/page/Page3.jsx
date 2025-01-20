@@ -35,6 +35,7 @@ function Page3() {
       <div className="pg3_mv">
         <Header />
         <div className="top">
+        <img src="/step1.png" alt="" className="TTL_mv_img"/>
           <Top x={1} />
         </div>
       </div>

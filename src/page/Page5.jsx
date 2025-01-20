@@ -30,6 +30,8 @@ function Page5() {
     <div className="pg5_mv">
     <Header />
       <div className="top">
+      <img src="/step3.png" alt="" className="TTL_mv_img"/>
+
         <Top x={3} />
       </div>
     </div>

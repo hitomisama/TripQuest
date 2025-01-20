@@ -309,6 +309,8 @@ h6 {
     writing-mode: vertical-rl; 
     text-orientation: upright;
     position: absolute;
+    top: 100px;
+    /* transform: translateY(-50%); */
 }
 
 .LGTTright{
