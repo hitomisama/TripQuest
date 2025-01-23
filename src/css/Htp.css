@@ -1,4 +1,4 @@
-/* ✅ 初始状态：隐藏，但仍然占位 */
+/* === 初始状态：隐藏 === */
 .HTPTtem {
     margin: 53px 35px;
     display: flex;
@@ -9,17 +9,17 @@
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-/* ✅ 进入视口后才播放动画 */
+/* === 进入窗口后淡入出现 === */
 .HTPTtem.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* === 文字逐字出现动画 === */
-@keyframes fadeInChar {
+/* === 文字由上至下淡入 === */
+@keyframes fadeInText {
     from {
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -27,19 +27,16 @@
     }
 }
 
-/* ✅ 让 h4 和 h5 文字一个个浮现 */
-.HTPTtem h4 span,
-.HTPTtem h5 span {
-    display: inline-block;
+/* ✅ 文字淡入：进入窗口后，h4 和 h5 依次出现 */
+.HTPTtem.fade-in h4,
+.HTPTtem.fade-in h5 {
     opacity: 0;
-    animation: fadeInChar 0.4s ease-in-out forwards;
+    animation: fadeInText 0.8s ease-out forwards;
 }
 
-/* ✅ 进入窗口后才播放文字动画 */
-.HTPTtem.fade-in h4 span,
-.HTPTtem.fade-in h5 span {
-    opacity: 1;
-    animation-delay: calc(var(--char-index) * 0.06s);
+/* ✅ h5 在 h4 之后 0.3s 出现 */
+.HTPTtem.fade-in h5 {
+    animation-delay: 0.3s;
 }
 
 /* === 保持原有布局 === */
@@ -81,7 +78,7 @@
     background-color: #fff;
     color: black;
     width: 291px;
-    padding: 10px 20px;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -89,4 +86,13 @@
     background-color: #fff;
     width: 332px;
     position: relative;
+}
+
+.HTPcontent h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.HTPcontent h5{
+    margin-top: 5px;
 }
