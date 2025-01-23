@@ -1,10 +1,48 @@
+/* ✅ 初始状态：隐藏，但仍然占位 */
 .HTPTtem {
     margin: 53px 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0; /* 初始状态透明 */
+    transform: translateY(20px); /* 轻微向下偏移 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+/* ✅ 进入视口后才播放动画 */
+.HTPTtem.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === 文字逐字出现动画 === */
+@keyframes fadeInChar {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ 让 h4 和 h5 文字一个个浮现 */
+.HTPTtem h4 span,
+.HTPTtem h5 span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInChar 0.4s ease-in-out forwards;
+}
+
+/* ✅ 进入窗口后才播放文字动画 */
+.HTPTtem.fade-in h4 span,
+.HTPTtem.fade-in h5 span {
+    opacity: 1;
+    animation-delay: calc(var(--char-index) * 0.06s);
+}
+
+/* === 保持原有布局 === */
 .point {
     background-color: #154603;
     width: 140px;
@@ -14,10 +52,10 @@
     align-items: center;
     justify-content: center;
     transform: rotate(-14.917deg);
-    position: absolute; /* 绝对定位，基于 .HTPTtem 定位 */
-    z-index: 2; /* 确保在标题和图片上方 */
-    top: 0px; /* 定位到标题的顶部 */
-    left: -35px; /* 定位到标题的左侧 */
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: -35px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -35,30 +73,20 @@
     border-right: 20px solid #fff;
     border-left: 20px solid #fff;
     border-bottom: 2px solid #ffff;
-    position: relative; /* 确保图片不会影响 .point 的定位 */
+    position: relative;
 }
 
-.HTPcontent h4 {
-    margin-top: 0;
-    margin-bottom: 0;
+.HTPcontent h4,
+.HTPcontent h5 {
     background-color: #fff;
     color: black;
     width: 291px;
     padding: 10px 20px;
-    position: relative; /* 确保 h4 作为 .point 的定位基准 */
+    position: relative;
 }
 
-.HTPcontent h5 {
-    margin-top: 0;
-    background-color: #fff;
-    color: black;
-    width: 291px;
-    height: auto;
-    padding: 10px 20px 20px;
-}
-
-.htpback{
+.htpback {
     background-color: #fff;
     width: 332px;
-    position: relative; 
+    position: relative;
 }

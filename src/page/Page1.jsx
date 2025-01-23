@@ -18,7 +18,7 @@ function Page1() {
   const sectionRef = useRef(null); // 绑定 WTQ 容器
   const [scrollTop, setScrollTop] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [hasPlayed, setHasPlayed] = useState(false); // 记录动画是否播放过
+  const [animationStarted, setAnimationStarted] = useState(false);
 
   // ✅ 监听滚动事件，更新 `scrollTop`
   useEffect(() => {
@@ -36,23 +36,22 @@ function Page1() {
 
   // ✅ 监听 `.WTQ` 是否进入视口
   useEffect(() => {
-    if (!sectionRef.current) return; // ✅ 确保 ref 绑定成功
+    if (!sectionRef.current) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true); // 触发动画
-          setHasPlayed(true); // ✅ 记录动画播放状态
-          observer.disconnect(); // ✅ 触发一次后停止监听
+        if (entries[0].isIntersecting && !animationStarted) {
+          setIsVisible(true);
+          setAnimationStarted(true); // 确保动画只触发一次
+          observer.disconnect();
         }
       },
       { threshold: 0.5 }
     );
 
     observer.observe(sectionRef.current);
-
     return () => observer.disconnect();
-  }, []);
+  }, [animationStarted]);
 
   const text1 =
     "旅+クエストの形で、一人旅を存分に楽しみながら、心をリセットし、もう一度自分と向き合う機会を提供する特別なサービスです。";
@@ -63,7 +62,7 @@ function Page1() {
     text.split("").map((char, index) => (
       <span
         key={index}
-        className={`fade-char ${hasPlayed ? "once-visible" : ""}`} // ✅ 文字动画播放完后，保持可见
+        className={`fade-char ${isVisible ? "visible" : ""}`} // ✅ 进入视口时才播放动画
         style={{ animationDelay: `${index * 0.05 + delayOffset}s` }}
       >
         {char}
@@ -89,8 +88,8 @@ function Page1() {
       {/* 介绍模块 */}
       <div className="WTQ" id="WTQ">
         <Ttl x={0} />
-        <div className="WTQ" id="WTQ" ref={sectionRef}>
-          <h5 className={`Introduction_pg1 ${isVisible ? "visible" : ""}`}>
+        <div className="WTQ" ref={sectionRef}>
+          <h5 className={`Introduction_pg1 ${isVisible ? "fade-in" : ""}`}>
             <p>{renderTextWithSpans(text1)}</p>
             <p>{renderTextWithSpans(text2, text1.length * 0.05)}</p>
           </h5>
@@ -106,31 +105,6 @@ function Page1() {
       {/* 三步说明模块 */}
       <div className="LGTT">
         <Ttl x={2} />
-        {/* <div className="LGTT-content">
-          <div className="LGTTleft">
-            <img src="LGTTnew.jpg" alt="" className="LGTTnew" />
-            <div className="LGTTmoji">
-              <h3>心をリセットの</h3>
-              <h3>３ステップ</h3>
-            </div>
-          </div>
-          <div className="LGTTright">
-            <div className="step">
-              <div className="step1">
-                <h4>リセット・step1</h4>
-                <h5>悩みを手放す</h5>
-              </div>
-              <div className="step2">
-                <h4>リセット・step2</h4>
-                <h5>未来への祈り</h5>
-              </div>
-              <div className="step3">
-                <h4>リセット・step3</h4>
-                <h5>自分自身と向き合う</h5>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className="LGTTimg"><img src="/Group 65.png" alt="" /></div>
       </div>
 
