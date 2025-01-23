@@ -36,25 +36,22 @@ function Page1() {
 
   // ✅ 监听 `.WTQ` 是否进入视口
   useEffect(() => {
+    if (!sectionRef.current) return; // ✅ 确保 ref 绑定成功
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           setIsVisible(true); // 触发动画
-          setHasPlayed(true); // 标记动画已经播放过
+          setHasPlayed(true); // ✅ 记录动画播放状态
+          observer.disconnect(); // ✅ 触发一次后停止监听
         }
       },
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(sectionRef.current);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   const text1 =
@@ -66,7 +63,7 @@ function Page1() {
     text.split("").map((char, index) => (
       <span
         key={index}
-        className={`fade-char ${hasPlayed ? "once-visible" : ""}`} // 文字动画播放完后，保持可见
+        className={`fade-char ${hasPlayed ? "once-visible" : ""}`} // ✅ 文字动画播放完后，保持可见
         style={{ animationDelay: `${index * 0.05 + delayOffset}s` }}
       >
         {char}
@@ -109,7 +106,7 @@ function Page1() {
       {/* 三步说明模块 */}
       <div className="LGTT">
         <Ttl x={2} />
-        <div className="LGTT-content">
+        {/* <div className="LGTT-content">
           <div className="LGTTleft">
             <img src="LGTTnew.jpg" alt="" className="LGTTnew" />
             <div className="LGTTmoji">
@@ -133,7 +130,8 @@ function Page1() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <div className="LGTTimg"><img src="/Group 65.png" alt="" /></div>
       </div>
 
       {/* 按钮区域 */}

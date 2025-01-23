@@ -162,8 +162,10 @@ h6 {
       opacity: 1;
       transform: translateY(0);
     }
+}  
+.animate-text {
+    animation: fadeInChar 0.5s ease-in-out forwards;
 }
-  
 .Introduction_pg1 {
     display: flex;
     flex-direction: column;
@@ -317,4 +319,8 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.LGTTimg img{
+    width: 50vh;
 }

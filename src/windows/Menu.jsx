@@ -30,14 +30,14 @@ function Menu({ isOpen, onClose }) {
     <div className="menu-overlay" onClick={onClose}>
       <div className="menu-content" onClick={(e) => e.stopPropagation()}>
         {/* 头部 LOGO & 关闭按钮 */}
-        <div className="menu_header">
+        {/* <div className="menu_header">
           <Link to="/">
             <img src="/TripQuest.png" alt="TripQuest" className="TripQuest" />
           </Link>
           <Link to="/">
             <img src="/LOGO.png" alt="Logo" className="Logo" />
           </Link>
-        </div>
+        </div> */}
 
         {/* 菜单内容 */}
         <h1 className="menuttl">旅・リセット</h1>
