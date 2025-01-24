@@ -20,7 +20,7 @@ function Page1() {
   const [isVisible, setIsVisible] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
 
-  // ✅ 监听滚动事件，更新 `scrollTop`
+  // 监听滚动事件，更新 `scrollTop`
   useEffect(() => {
     const handleScroll = () => {
       if (containerRef.current) {
@@ -34,7 +34,7 @@ function Page1() {
     };
   }, []);
 
-  // ✅ 监听 `.WTQ` 是否进入视口
+  // 监听 `.WTQ` 是否进入视口
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -62,7 +62,7 @@ function Page1() {
     text.split("").map((char, index) => (
       <span
         key={index}
-        className={`fade-char ${isVisible ? "visible" : ""}`} // ✅ 进入视口时才播放动画
+        className={`fade-char ${isVisible ? "visible" : ""}`} // 进入视口时才播放动画
         style={{ animationDelay: `${index * 0.05 + delayOffset}s` }}
       >
         {char}

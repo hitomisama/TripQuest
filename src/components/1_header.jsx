@@ -14,7 +14,7 @@ function Header({ scrollTop }) {
       className="Header" 
       style={{ 
         // opacity: opacity, 
-        transform: `translateY(${translateY}px)`, // ✅ 上移效果
+        transform: `translateY(${translateY}px)`, //  上移效果
         transition: "opacity 0.3s ease-out, transform 0.3s ease-out" // 平滑动画
       }}
     >

@@ -27,14 +27,14 @@
     }
 }
 
-/* ✅ 文字淡入：进入窗口后，h4 和 h5 依次出现 */
+/* 文字淡入：进入窗口后，h4 和 h5 依次出现 */
 .HTPTtem.fade-in h4,
 .HTPTtem.fade-in h5 {
     opacity: 0;
     animation: fadeInText 0.8s ease-out forwards;
 }
 
-/* ✅ h5 在 h4 之后 0.3s 出现 */
+/* h5 在 h4 之后 0.3s 出现 */
 .HTPTtem.fade-in h5 {
     animation-delay: 0.3s;
 }
