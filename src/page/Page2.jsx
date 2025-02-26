@@ -21,7 +21,7 @@ function Page2() {
     window.scrollTo(0, 0); // 页面加载时滚动到顶部
   }, []);
 
-  // ✅ 监听 `Top` 组件的可视状态
+  // 监听 `Top` 组件的可视状态
   // const introRef = useRef(null);
   // const [introVisible, setIntroVisible] = useState(false);
 

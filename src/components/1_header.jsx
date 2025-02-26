@@ -5,7 +5,6 @@ import '../css/1_header.css';
 function Header({ scrollTop }) {
   // 计算 Header 的透明度（越往上滚，越透明）
   // const opacity = Math.max(0, 1 - Math.abs(scrollTop) / 750);
-
   // 计算 Header 的 `Y` 轴移动距离
   const translateY = Math.min(0, scrollTop + 750); // 向上移动
 
